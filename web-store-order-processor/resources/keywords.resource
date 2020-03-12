@@ -20,7 +20,9 @@ Process orders
 Validate prerequisites
     File Should Exist       ${EXCEL_FILE_PATH}
     Variable Should Exist   ${SWAG_LABS_USER_NAME}
+    Should Not Be Empty     ${SWAG_LABS_USER_NAME}
     Variable Should Exist   ${SWAG_LABS_PASSWORD}
+    Should Not Be Empty     ${SWAG_LABS_PASSWORD}
 
 Open Swag Labs
     Open Browser    ${SWAG_LABS_URL}    ${BROWSER}
