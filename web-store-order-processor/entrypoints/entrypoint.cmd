@@ -1,7 +1,6 @@
 @echo off
 
-REM The example robot uses browser integration
-REM This setups the browser control for Chrome
+REM Sets up chromedriver for Chrome.
 webdrivermanager chrome -d temp -l bin || goto :error
 
 REM Executes all tasks defined in the "tasks" directory.

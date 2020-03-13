@@ -1,3 +1,3 @@
 # Resources
 
-Place your Robot Framework keyword files (`*.resource`) in this directory.
+Place your Robot Framework keyword files (`*.robot`) in this directory.

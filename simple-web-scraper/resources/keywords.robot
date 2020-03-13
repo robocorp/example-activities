@@ -2,7 +2,7 @@
 Library     ExampleLibrary
 Library     OperatingSystem
 Library     SeleniumLibrary
-Variables   example_variables.py
+Variables   variables.py
 
 *** Keywords ***
 Store web page content
