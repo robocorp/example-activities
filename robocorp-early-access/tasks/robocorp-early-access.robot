@@ -16,7 +16,7 @@ Execute Google image search and store the first result image
 
 *** Keywords ***
 Open Google search page
-    Open Chrome Browser     ${GOOGLE_URL}   headless=True
+    Open Headless Chrome Browser    ${GOOGLE_URL}
 
 Search for
     [Arguments]     ${text}  
