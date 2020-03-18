@@ -8,7 +8,7 @@ ${SEARCH_TERM}  cat picture
 
 *** Keywords ***
 Open Google search page
-    Open Headless Chrome Browser    ${GOOGLE_URL}
+    Open Chrome Browser     ${GOOGLE_URL}
 
 Search for
     [Arguments]     ${text}  
