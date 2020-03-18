@@ -8,4 +8,3 @@ dependencies:
   - robotframework-seleniumlibrary
   - pip:
       - webdrivermanager
-      - rpa-framework

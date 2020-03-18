@@ -1,14 +1,15 @@
 *** Settings ***
 Documentation   Executes Google image search and stores the first result image.
-Library         RPA.Browser
+Library         SeleniumLibrary
 
 *** Variables ***
-${GOOGLE_URL}=      https://google.com/?hl=en
-${SEARCH_TERM}=     cat picture
+${BROWSER}      headlesschrome
+${GOOGLE_URL}   https://google.com/?hl=en
+${SEARCH_TERM}  cat picture
 
 *** Keywords ***
 Open Google search page
-    Open Headless Chrome Browser    ${GOOGLE_URL}
+    Open Browser    ${GOOGLE_URL}   ${BROWSER}
 
 Search for
     [Arguments]     ${text}  
