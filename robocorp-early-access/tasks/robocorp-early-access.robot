@@ -6,14 +6,6 @@ Library         RPA.Browser
 ${GOOGLE_URL}=      https://google.com/?hl=en
 ${SEARCH_TERM}=     cat picture
 
-*** Tasks ***
-Execute Google image search and store the first result image
-    Open Google search page
-    Search for                  ${SEARCH_TERM}
-    View image search results
-    Screenshot first result
-    [Teardown]                  Close Browser
-
 *** Keywords ***
 Open Google search page
     Open Headless Chrome Browser    ${GOOGLE_URL}
@@ -28,3 +20,11 @@ View image search results
 
 Screenshot first result
     Capture Element Screenshot  css:div[data-ri="0"]
+
+*** Tasks ***
+Execute Google image search and store the first result image
+    Open Google search page
+    Search for                  ${SEARCH_TERM}
+    View image search results
+    Screenshot first result
+    [Teardown]                  Close Browser
