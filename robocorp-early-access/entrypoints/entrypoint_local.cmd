@@ -1,6 +1,6 @@
 @echo off
 
-REM Installs a headless driver for Chrome.
+REM Installs a driver for Chrome.
 webdrivermanager chrome -d temp -l bin
 
 REM Executes all tasks defined in the "tasks" directory.
