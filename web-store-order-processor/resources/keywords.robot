@@ -9,7 +9,7 @@ Process orders
     Validate prerequisites
     Open Swag Labs
     Wait Until Keyword Succeeds     3x  1s  Login   ${SWAG_LABS_USER_NAME}  ${SWAG_LABS_PASSWORD}
-    @{orders}=                      Collect orders
+    ${orders}=                      Collect orders
 
     FOR     ${order}    IN  @{orders}
         Run Keyword And Continue On Failure     Process order   ${order}
@@ -43,8 +43,8 @@ Assert logged in
 
 *** Keyword ***
 Collect orders
-    @{orders}=  Get orders          ${EXCEL_FILE_PATH}
-    [Return]    @{orders}
+    ${orders}=  Get orders          ${EXCEL_FILE_PATH}
+    [Return]    ${orders}
 
 *** Keyword ***
 Process order

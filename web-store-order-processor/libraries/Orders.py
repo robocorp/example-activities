@@ -1,14 +1,21 @@
-import pandas
+from RPA.Excel import Files
+from RPA.Tables import Tables
 
 
 class Orders:
     def get_orders(self, excel):
-        data_frame = pandas.read_excel(excel)
+        files = Files()
+        workbook = files.open_workbook(excel)
+        rows = workbook.read_worksheet(header=True)
+        tables = Tables()
+        table = tables.create_table(rows)
+        tables.filter_empty_rows(table)
+        table.delete_columns('None')
         orders = []
-        for row in data_frame.values:
+        for row in table:
             order = {
-                "item": row[1],
-                "zip": row[2],
+                "item": row.Item,
+                "zip": int(row.Zip),
                 "first_name": row[0].split()[0],
                 "last_name": row[0].split()[1]
             }

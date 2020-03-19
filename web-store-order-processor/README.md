@@ -9,10 +9,10 @@ automation. Uses environment variables for credentials.
 Install Python package dependencies:
 
 ```bash
-pip install pandas rpa-framework
+pip install rpa-framework
 ```
 
-## If executing with Robocode CLI
+## Executing with Robocode CLI
 
 > Assumes `robocode` is installed. Install with `pip install robocode`.
 
