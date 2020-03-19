@@ -1,6 +1,5 @@
 import os
 
-BROWSER = "Chrome"
 EXCEL_FILE_PATH = __file__ + "/../../devdata/Data.xlsx"
 SWAG_LABS_URL = "https://www.saucedemo.com"
 SWAG_LABS_PASSWORD = os.getenv("SWAG_LABS_PASSWORD")

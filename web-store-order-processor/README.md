@@ -9,13 +9,7 @@ automation. Uses environment variables for credentials.
 Install Python package dependencies:
 
 ```bash
-pip install robotframework-seleniumlibrary webdrivermanager pandas xlrd
-```
-
-## If executing in Robocode Lab (not required if executing with Robocode CLI)
-
-```bash
-webdrivermanager chrome -d temp -l bin
+pip install pandas rpa-framework
 ```
 
 ## If executing with Robocode CLI

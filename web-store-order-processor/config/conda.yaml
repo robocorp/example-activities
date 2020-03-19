@@ -10,3 +10,4 @@ dependencies:
   - xlrd
   - pip:
       - webdrivermanager
+      - rpa-framework
