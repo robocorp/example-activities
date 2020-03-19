@@ -1,15 +1,15 @@
 *** Settings ***
 Library     ExampleLibrary
 Library     OperatingSystem
-Library     SeleniumLibrary
+Library     RPA.Browser
 Variables   variables.py
 
-*** Keywords ***
+*** Keyword ***
 Store web page content
     ${current_date}=            Current date
     Log                         ${current_date}
     Set Selenium Speed          0.2 second
-    Open Browser                ${URL}              ${BROWSER}
+    Open Chrome Browser         ${URL}
     Click Link                  Examples
     Click Link                  Libraries
     ${text}=                    Get Text            scroller

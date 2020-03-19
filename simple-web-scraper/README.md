@@ -9,16 +9,10 @@ the log.
 Install Python package dependencies:
 
 ```bash
-pip install robotframework-seleniumlibrary webdrivermanager
+pip install rpa-framework
 ```
 
-## If executing in Robocode Lab (not required if executing with Robocode CLI)
-
-```bash
-webdrivermanager chrome -d temp -l bin
-```
-
-## If executing with Robocode CLI
+## Executing with Robocode CLI
 
 > Assumes `robocode` is installed. Install with `pip install robocode`.
 
