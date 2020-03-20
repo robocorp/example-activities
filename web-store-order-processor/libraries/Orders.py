@@ -10,7 +10,6 @@ class Orders:
         tables = Tables()
         table = tables.create_table(rows)
         tables.filter_empty_rows(table)
-        table.delete_columns('None')
         orders = []
         for row in table:
             order = {
