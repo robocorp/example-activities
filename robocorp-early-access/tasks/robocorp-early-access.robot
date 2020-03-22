@@ -8,7 +8,7 @@ ${SEARCH_TERM}  cat picture
 
 *** Keyword ***
 Open Google search page
-    Open Available Browser  ${GOOGLE_URL}
+    Open Chrome Browser     ${GOOGLE_URL}
 
 *** Keyword ***
 Search for
