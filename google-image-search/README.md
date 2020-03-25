@@ -1,4 +1,4 @@
-# Robocorp early access example activity
+# Google image search example activity
 
 Executes Google image search and stores the first result image.
 
