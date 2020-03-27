@@ -2,6 +2,8 @@
 
 Executes Google image search and stores the first result image.
 
+> You need to have [Chrome](https://www.google.com/chrome/) installed.
+
 ## Setup
 
 Install Python package dependencies:
