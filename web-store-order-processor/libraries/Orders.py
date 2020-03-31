@@ -1,4 +1,4 @@
-from RPA.Excel import Files
+from RPA.Excel.Files import Files
 from RPA.Tables import Tables
 
 
