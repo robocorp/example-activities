@@ -26,7 +26,7 @@ Execute the activity:
 
 Windows:
 
-```bash
+```
 robo run entrypoint.cmd
 ```
 
