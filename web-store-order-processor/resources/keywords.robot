@@ -27,7 +27,7 @@ Validate prerequisites
 
 *** Keyword ***
 Open Swag Labs
-    Open Chrome Browser     ${SWAG_LABS_URL}
+    Open Available Browser  ${SWAG_LABS_URL}
 
 *** Keyword ***
 Login
