@@ -9,7 +9,7 @@ Store web page content
     ${current_date}=            Current date
     Log                         ${current_date}
     Set Selenium Speed          0.2 second
-    Open Chrome Browser         ${URL}
+    Open Available Browser      ${URL}
     Click Link                  Examples
     Click Link                  Libraries
     ${text}=                    Get Text            scroller
