@@ -1,1 +1,1 @@
-# Example activities
+# Robocorp example activities
