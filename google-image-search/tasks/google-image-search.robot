@@ -15,6 +15,7 @@ Search for
     [Arguments]     ${text}  
     Input Text      name:q      ${text}
     Press Keys      name:q      ENTER
+    Wait Until Page Contains    results
 
 *** Keyword ***
 View image search results
