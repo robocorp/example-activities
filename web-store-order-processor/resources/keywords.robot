@@ -39,6 +39,7 @@ Login
 
 *** Keyword ***
 Assert logged in
+    Wait Until Page Contains Element    inventory_container
     Location Should Be  ${SWAG_LABS_URL}/inventory.html
 
 *** Keyword ***
@@ -95,6 +96,7 @@ Open cart
 
 *** Keyword ***
 Assert cart page
+    Wait Until Page Contains Element    cart_contents_container
     Location Should Be  ${SWAG_LABS_URL}/cart.html
 
 *** Keyword ***
@@ -113,17 +115,21 @@ Checkout
     Input Text                          postal-code     ${order["zip"]}
     Submit Form
     Assert checkout confirmation page   
+    Wait Until Page Contains Element    css:.btn_action
     Click Link                          css:.btn_action
     Assert checkout complete page
 
 *** Keyword ***
 Assert checkout information page
+    Wait Until Page Contains Element    checkout_info_container
     Location Should Be  ${SWAG_LABS_URL}/checkout-step-one.html
 
 *** Keyword ***    
 Assert checkout confirmation page
+    Wait Until Page Contains Element    checkout_summary_container
     Location Should Be  ${SWAG_LABS_URL}/checkout-step-two.html
 
 *** Keyword ***
 Assert checkout complete page
+    Wait Until Page Contains Element    checkout_complete_container
     Location Should Be  ${SWAG_LABS_URL}/checkout-complete.html
