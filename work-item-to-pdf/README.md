@@ -57,5 +57,6 @@ robo run entrypoint.sh -v devdata/env.json
 
 ## Expected results of the activity
 
-After you run the robot, you will find a zip archive `PDFs.zip` file in the `temp/robocode/work-item-to-pdf/output` directory.
+After you run the robot, you will find a zip archive `PDFs.zip` file in the `temp/robocode/work-item-to-pdf/output` directory, or the `output` directory if executing the example activity in Robocode Lab in notebook mode.
+
 Extract it and you will see the PDF invitations according to the data in the Excel file.
