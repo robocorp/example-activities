@@ -4,5 +4,5 @@ Documentation   Invite printer robot. Creates PDF invitations to events based on
 Resource        keywords.robot
 
 *** Tasks ***
-Create pdf invitations
+Create PDF invitations
     Process invitations
