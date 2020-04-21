@@ -1,0 +1,90 @@
+{
+  "1": {
+    "1": {
+      "variables": {
+        "invitations": [
+          {
+            "first_name": "Reynard",
+            "last_name": "Mouse",
+            "address": "4 Service Center",
+            "city": "Toronto",
+            "date": "2019/07/03",
+            "time": "10:00 PM"
+          },
+          {
+            "first_name": "Elisabeth",
+            "last_name": "Kilfoyle",
+            "address": "197 Ronald Regan Drive",
+            "city": "New York",
+            "date": "2019/05/03",
+            "time": "10:20 PM"
+          },
+          {
+            "first_name": "Cyril",
+            "last_name": "Blundon",
+            "address": "3554 Chive Circle",
+            "city": "San Francisco",
+            "date": "2019/05/10",
+            "time": "1:33 PM"
+          },
+          {
+            "first_name": "Vincenz",
+            "last_name": "Paolazzi",
+            "address": "20533 6th Crossing",
+            "city": "Milan",
+            "date": "2019/12/14",
+            "time": "6:58 AM"
+          },
+          {
+            "first_name": "Jeannie",
+            "last_name": "Charge",
+            "address": "9 Michigan Street",
+            "city": "Kansas City",
+            "date": "2020/02/12",
+            "time": "4:27 AM"
+          },
+          {
+            "first_name": "Alexio",
+            "last_name": "Hellis",
+            "address": "8 Grim Trail",
+            "city": "Lahore",
+            "date": "2019/05/05",
+            "time": "5:04 PM"
+          },
+          {
+            "first_name": "Luca",
+            "last_name": "Viel",
+            "address": "91764 Reindahl Park",
+            "city": "New Dehli",
+            "date": "2019/12/17",
+            "time": "8:37 AM"
+          },
+          {
+            "first_name": "Sly",
+            "last_name": "Lammerts",
+            "address": "8077 Pennsylvania Drive",
+            "city": "Helsinki",
+            "date": "2020/02/09",
+            "time": "11:23 PM"
+          },
+          {
+            "first_name": "Leah",
+            "last_name": "Mithun",
+            "address": "3619 Oxford Place",
+            "city": "Stockholm",
+            "date": "2019/10/30",
+            "time": "1:15 PM"
+          },
+          {
+            "first_name": "Maridel",
+            "last_name": "Sneezum",
+            "address": "4 Cambridge Center",
+            "city": "London",
+            "date": "2020/03/26",
+            "time": "11:24 AM"
+          }
+        ]
+      }
+    }
+  }
+}
