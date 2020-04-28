@@ -4,7 +4,7 @@ Library         RPA.Browser
 
 *** Variables ***
 ${GOOGLE_URL}   https://google.com/?hl=en
-${SEARCH_TERM}  cat picture
+${SEARCH_TERM}  cute cat picture
 
 *** Keyword ***
 Open Google search page
