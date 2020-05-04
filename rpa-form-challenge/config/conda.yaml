@@ -7,5 +7,4 @@ dependencies:
   - robotframework=3.1
   - robotframework-seleniumlibrary
   - pip:
-      - webdrivermanager
       - rpa-framework==0.8.5
