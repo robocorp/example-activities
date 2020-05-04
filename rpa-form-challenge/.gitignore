@@ -7,4 +7,5 @@ temp/
 .vscode
 .DS_Store
 *.pyc
+*.zip
 *.xlsx
