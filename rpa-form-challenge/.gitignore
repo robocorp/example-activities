@@ -1,4 +1,3 @@
-output/
 venv/
 temp/
 .rpa/
@@ -8,4 +7,4 @@ temp/
 .vscode
 .DS_Store
 *.pyc
-*.zip
+*.xlsx
