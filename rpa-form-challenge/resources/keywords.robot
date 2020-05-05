@@ -6,10 +6,10 @@ Library           RPA.HTTP
 Library           RPA.Tables
 
 *** Keywords ***
-Download the challenge Excel file
+Download The Challenge Excel File
     HTTP GET    ${EXCEL_FILE_URL}    ${EXCEL_FILE_PATH}
 
-Read the contents of the Excel file into a table
+Read The Contents Of The Excel File Into A Table
     Open workbook    ${EXCEL_FILE_PATH}
     ${worksheet}=    Read worksheet    header=${TRUE}
     ${table}=    Create table    ${worksheet}
@@ -17,10 +17,10 @@ Read the contents of the Excel file into a table
     Close workbook
     [Return]    ${table}
 
-Open the challenge website
+Open The Challenge Website
     Open available browser    ${CHALLENGE_URL}
 
-Fill and submit the form with data from
+Fill And Submit The Form With Data From
     [Arguments]    ${row}
     Input text    xpath://input[@ng-reflect-name="labelEmail"]    ${row.Email}
     Input text    xpath://input[@ng-reflect-name="labelPhone"]    ${row.Phone_Number}
@@ -31,6 +31,6 @@ Fill and submit the form with data from
     Input text    xpath://input[@ng-reflect-name="labelLastName"]    ${row.Last_Name}
     Click button    Submit
 
-Take a screenshot of the results
+Take A Screenshot Of The Results
     Wait until element is visible    css=.congratulations
     Capture element screenshot    css=.congratulations    challenge-results.png

@@ -11,13 +11,13 @@ ${EXCEL_FILE_PATH}    ${TEMPDIR}${/}challenge.xlsx
 
 *** Tasks ***
 Solve the RPA form challenge
-    Download the challenge Excel file
-    ${rows}=    Read the contents of the Excel file into a table
+    Download The Challenge Excel File
+    ${rows}=    Read The Contents Of The Excel File Into A Table
     Remove File    ${EXCEL_FILE_PATH}
-    Open the challenge website
-    Click button    Start
+    Open The Challenge Website
+    Click Button    Start
     FOR    ${row}    IN    @{rows}
-        Fill and submit the form with data from    ${row}
+        Fill And Submit The Form With Data From    ${row}
     END
-    Take a screenshot of the results
-    [Teardown]    Close all browsers
+    Take A Screenshot Of The Results
+    [Teardown]    Close All Browsers
