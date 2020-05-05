@@ -6,5 +6,5 @@ dependencies:
   - pip
   - robotframework=3.1
   - pip:
-      - rpa-framework==0.8.4
+      - rpa-framework==0.8.7
       - robotframework-archivelibrary==0.4.0
