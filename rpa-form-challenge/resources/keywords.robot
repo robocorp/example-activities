@@ -3,7 +3,6 @@ Library           RPA.Browser
 Library           RPA.Excel.Files
 Library           RPA.FileSystem
 Library           RPA.HTTP
-Library           RPA.Tables
 
 *** Keywords ***
 Download The Challenge Excel File
