@@ -1,50 +1,36 @@
 *** Settings ***
-Library           Collections
 Library           RPA.Browser
 Library           RPA.Excel.Files
+Library           RPA.FileSystem
 Library           RPA.HTTP
 Library           RPA.Tables
-Variables         variables.py
 
 *** Keywords ***
-Download the Excel file for the challenge
-    HTTP GET    ${EXCEL_FILE_URL}    ${EXCEL_FILE_LOCAL_DOWNLOAD_PATH}
+Download the challenge Excel file
+    HTTP GET    ${EXCEL_FILE_URL}    ${EXCEL_FILE_PATH}
 
-Collect people data from the Excel file
-    Open Workbook    ${EXCEL_FILE_LOCAL_DOWNLOAD_PATH}
-    ${worksheet}=    Read Worksheet    header=${TRUE}
-    ${data_table}=    Create Table    ${worksheet}
-    Filter Empty Rows    ${data_table}
-    ${people}=    Create List
-    FOR    ${row}    IN    @{data_table}
-        ${person}=    Create Dictionary
-        Set To Dictionary    ${person}    first_name    ${row.First_Name}
-        Set To Dictionary    ${person}    last_name    ${row.Last_Name}
-        Set To Dictionary    ${person}    company_name    ${row.Company_Name}
-        Set To Dictionary    ${person}    role_in_company    ${row.Role_in_Company}
-        Set To Dictionary    ${person}    address    ${row.Address}
-        Set To Dictionary    ${person}    email    ${row.Email}
-        Set To Dictionary    ${person}    phone_number    ${row.Phone_Number}
-        Append To List    ${people}    ${person}
-    END
-    Close Workbook
-    [Return]    ${people}
+Read the contents of the Excel file into a table
+    Open workbook    ${EXCEL_FILE_PATH}
+    ${worksheet}=    Read worksheet    header=${TRUE}
+    ${table}=    Create table    ${worksheet}
+    Filter empty rows    ${table}
+    Close workbook
+    [Return]    ${table}
 
-Open the RPA challenge website
-    Open Available Browser    ${RPA_CHALLENGE_URL}
+Open the challenge website
+    Open available browser    ${CHALLENGE_URL}
 
-Fill and submit the form for one person
-    [Arguments]    ${person}
-    Input Text    xpath://input[@ng-reflect-name="labelEmail"]    ${person["email"]}
-    Input Text    xpath://input[@ng-reflect-name="labelPhone"]    ${person["phone_number"]}
-    Input Text    xpath://input[@ng-reflect-name="labelFirstName"]    ${person["first_name"]}
-    Input Text    xpath://input[@ng-reflect-name="labelRole"]    ${person["role_in_company"]}
-    Input Text    xpath://input[@ng-reflect-name="labelAddress"]    ${person["address"]}
-    Input Text    xpath://input[@ng-reflect-name="labelCompanyName"]    ${person["company_name"]}
-    Input Text    xpath://input[@ng-reflect-name="labelLastName"]    ${person["last_name"]}
-    Click Button    Submit
+Fill and submit the form with data from
+    [Arguments]    ${row}
+    Input text    xpath://input[@ng-reflect-name="labelEmail"]    ${row.Email}
+    Input text    xpath://input[@ng-reflect-name="labelPhone"]    ${row.Phone_Number}
+    Input text    xpath://input[@ng-reflect-name="labelFirstName"]    ${row.First_Name}
+    Input text    xpath://input[@ng-reflect-name="labelRole"]    ${row.Role_in_Company}
+    Input text    xpath://input[@ng-reflect-name="labelAddress"]    ${row.Address}
+    Input text    xpath://input[@ng-reflect-name="labelCompanyName"]    ${row.Company_Name}
+    Input text    xpath://input[@ng-reflect-name="labelLastName"]    ${row.Last_Name}
+    Click button    Submit
 
-Take screenshot of the results
-    ${congratulations_element}=    Set Variable    css=.congratulations
-    Wait Until Element Is Visible    ${congratulations_element}
-    Capture Element Screenshot    ${congratulations_element}    challenge-results.png
+Take a screenshot of the results
+    Wait until element is visible    css=.congratulations
+    Capture element screenshot    css=.congratulations    challenge-results.png

@@ -4,14 +4,20 @@ Documentation     Robot to solve the first challenge at rpachallenge.com, which 
 ...               taken from a provided Microsoft Excel file.
 Resource          keywords.robot
 
+*** Variables ***
+${CHALLENGE_URL}    http://rpachallenge.com/
+${EXCEL_FILE_URL}    http://rpachallenge.com/assets/downloadFiles/challenge.xlsx
+${EXCEL_FILE_PATH}    ${TEMPDIR}${/}challenge.xlsx
+
 *** Tasks ***
 Solve the RPA form challenge
-    Download the Excel file for the challenge
-    ${people}=    Collect people data from the Excel file
-    Open the RPA challenge website
-    Click Button    Start
-    FOR    ${person}    IN    @{people}
-        Run Keyword And Continue On Failure    Fill and submit the form for one person    ${person}
+    Download the challenge Excel file
+    ${rows}=    Read the contents of the Excel file into a table
+    Remove File    ${EXCEL_FILE_PATH}
+    Open the challenge website
+    Click button    Start
+    FOR    ${row}    IN    @{rows}
+        Fill and submit the form with data from    ${row}
     END
-    Take screenshot of the results
-    [Teardown]    Close Browser
+    Take a screenshot of the results
+    [Teardown]    Close all browsers
