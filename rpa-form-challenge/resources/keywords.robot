@@ -19,13 +19,13 @@ Open The Challenge Website
 
 Fill And Submit The Form With Data From
     [Arguments]    ${row}
-    Input Text    xpath://input[@ng-reflect-name="labelEmail"]    ${row.Email}
-    Input Text    xpath://input[@ng-reflect-name="labelPhone"]    ${row.Phone_Number}
-    Input Text    xpath://input[@ng-reflect-name="labelFirstName"]    ${row.First_Name}
-    Input Text    xpath://input[@ng-reflect-name="labelRole"]    ${row.Role_in_Company}
-    Input Text    xpath://input[@ng-reflect-name="labelAddress"]    ${row.Address}
-    Input Text    xpath://input[@ng-reflect-name="labelCompanyName"]    ${row.Company_Name}
-    Input Text    xpath://input[@ng-reflect-name="labelLastName"]    ${row.Last_Name}
+    Input Text    xpath://input[@ng-reflect-name="labelFirstName"]    ${row}[First Name]
+    Input Text    xpath://input[@ng-reflect-name="labelLastName"]     ${row}[Last Name]
+    Input Text    xpath://input[@ng-reflect-name="labelEmail"]        ${row}[Email]
+    Input Text    xpath://input[@ng-reflect-name="labelPhone"]        ${row}[Phone Number]
+    Input Text    xpath://input[@ng-reflect-name="labelAddress"]      ${row}[Address]
+    Input Text    xpath://input[@ng-reflect-name="labelCompanyName"]  ${row}[Company Name]
+    Input Text    xpath://input[@ng-reflect-name="labelRole"]         ${row}[Role in Company]
     Click Button    Submit
 
 Take A Screenshot Of The Results
