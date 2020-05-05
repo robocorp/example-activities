@@ -7,15 +7,13 @@ Library           RPA.Tables
 
 *** Keywords ***
 Download The Challenge Excel File
-    HTTP GET    ${EXCEL_FILE_URL}    ${EXCEL_FILE_PATH}
+    Download    ${EXCEL_FILE_URL}    ${EXCEL_FILE_PATH}    overwrite=${TRUE}
 
 Read The Contents Of The Excel File Into A Table
     Open Workbook    ${EXCEL_FILE_PATH}
-    ${worksheet}=    Read Worksheet    header=${TRUE}
-    ${table}=    Create Table    ${worksheet}
-    Filter Empty Rows    ${table}
+    ${worksheet}=    Read Worksheet As Table    header=${TRUE}    trim=${TRUE}
     Close Workbook
-    [Return]    ${table}
+    [Return]    ${worksheet}
 
 Open The Challenge Website
     Open Available Browser    ${CHALLENGE_URL}
