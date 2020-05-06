@@ -3,8 +3,9 @@ Documentation     Robot to solve the first challenge at rpachallenge.com, which 
 ...               filling a form that randomly rearranges itself for ten times, with data
 ...               taken from a provided Microsoft Excel file.
 Library           RPA.Browser
-Library           RPA.HTTP 
 Library           RPA.Excel.Files
+Library           RPA.HTTP 
+
 
 *** Keyword ***
 Get The List Of People From The Excel File
@@ -45,4 +46,4 @@ Fill The Forms
 *** Task ***
 Collect The Results
     Capture Element Screenshot    css:div.congratulations
-    Close All Browsers
+    [Teardown]  Close All Browsers
