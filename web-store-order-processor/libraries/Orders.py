@@ -17,7 +17,7 @@ class Orders:
             first_name, last_name = row["Name"].split()
             order = {
                 "item": row["Item"],
-                "zip": row["Zip"],
+                "zip": int(row["Zip"]),
                 "first_name": first_name,
                 "last_name": last_name
             }
