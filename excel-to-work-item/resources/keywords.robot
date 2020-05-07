@@ -1,5 +1,4 @@
 *** Settings ***
-Library     Collections
 Library     OperatingSystem
 Library     RPA.Excel.Files
 Library     RPA.Robocloud.Items
