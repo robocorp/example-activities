@@ -18,13 +18,13 @@ Get The List Of People From The Excel File
 *** Keyword ***
 Fill And Submit The Form
     [Arguments]    ${person}  
-    Input Text    css:input[ng-reflect-name="labelFirstName"]  ${person.First_Name}
-    Input Text    css:input[ng-reflect-name="labelLastName"]  ${person.Last_Name}
-    Input Text    css:input[ng-reflect-name="labelCompanyName"]  ${person.Company_Name}
-    Input Text    css:input[ng-reflect-name="labelRole"]  ${person.Role_in_Company}
-    Input Text    css:input[ng-reflect-name="labelAddress"]  ${person.Address}
-    Input Text    css:input[ng-reflect-name="labelEmail"]  ${person.Email}
-    Input Text    css:input[ng-reflect-name="labelPhone"]  ${person.Phone_Number}
+    Input Text    css:input[ng-reflect-name="labelFirstName"]  ${person}[First Name]
+    Input Text    css:input[ng-reflect-name="labelLastName"]  ${person}[Last Name]
+    Input Text    css:input[ng-reflect-name="labelCompanyName"]  ${person}[Company Name]
+    Input Text    css:input[ng-reflect-name="labelRole"]  ${person}[Role in Company]
+    Input Text    css:input[ng-reflect-name="labelAddress"]  ${person}[Address]
+    Input Text    css:input[ng-reflect-name="labelEmail"]  ${person}[Email]
+    Input Text    css:input[ng-reflect-name="labelPhone"]  ${person}[Phone Number]
     Click Button    Submit
 
 
