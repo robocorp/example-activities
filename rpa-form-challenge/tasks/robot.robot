@@ -4,8 +4,7 @@ Documentation     Robot to solve the first challenge at rpachallenge.com, which 
 ...               taken from a provided Microsoft Excel file.
 Library           RPA.Browser
 Library           RPA.Excel.Files
-Library           RPA.HTTP 
-
+Library           RPA.HTTP
 
 *** Keyword ***
 Get The List Of People From The Excel File
@@ -16,15 +15,22 @@ Get The List Of People From The Excel File
 
 
 *** Keyword ***
+Set Value By Xpath
+    [Arguments]    ${xpath}    ${value}
+    ${result}=    Execute Javascript    document.evaluate('${xpath}',document.body,null,9,null).singleNodeValue.value='${value}';
+    [Return]    ${result}
+
+
+*** Keyword ***
 Fill And Submit The Form
-    [Arguments]    ${person}  
-    Input Text    css:input[ng-reflect-name="labelFirstName"]  ${person}[First Name]
-    Input Text    css:input[ng-reflect-name="labelLastName"]  ${person}[Last Name]
-    Input Text    css:input[ng-reflect-name="labelCompanyName"]  ${person}[Company Name]
-    Input Text    css:input[ng-reflect-name="labelRole"]  ${person}[Role in Company]
-    Input Text    css:input[ng-reflect-name="labelAddress"]  ${person}[Address]
-    Input Text    css:input[ng-reflect-name="labelEmail"]  ${person}[Email]
-    Input Text    css:input[ng-reflect-name="labelPhone"]  ${person}[Phone Number]
+    [Arguments]    ${person}
+    Set Value By Xpath    //input[@ng-reflect-name="labelFirstName"]  ${person}[First Name]
+    Set Value By Xpath    //input[@ng-reflect-name="labelLastName"]  ${person}[Last Name]
+    Set Value By Xpath    //input[@ng-reflect-name="labelCompanyName"]  ${person}[Company Name]
+    Set Value By Xpath    //input[@ng-reflect-name="labelRole"]  ${person}[Role in Company]
+    Set Value By Xpath    //input[@ng-reflect-name="labelAddress"]  ${person}[Address]
+    Set Value By Xpath    //input[@ng-reflect-name="labelEmail"]  ${person}[Email]
+    Set Value By Xpath    //input[@ng-reflect-name="labelPhone"]  ${person}[Phone Number]
     Click Button    Submit
 
 
@@ -46,4 +52,4 @@ Fill The Forms
 *** Task ***
 Collect The Results
     Capture Element Screenshot    css:div.congratulations
-    [Teardown]  Close All Browsers
+    Close All Browsers
