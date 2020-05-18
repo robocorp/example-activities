@@ -1,4 +1,4 @@
-# RobotSpareBinParts intranet robot - starter files
+# RobotSpareBin intranet robot - starter files
 
 This activity is the starting point of Robocorp's Beginners course on [Robohub](https://hub.robocorp.com/).
 
@@ -6,11 +6,11 @@ Check the `robotsparebin-intranet-complete` activity for the finished version of
 
 ## Executing with Robocode Lab
 
-You can choose to run the activity in Robocode Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the activity in Robocode Lab in two different modes, using the _Run activity_ functionality or in _Notebook mode_.
 
 > For more information about running your activities in Robocode Lab, check [this article on Robohub](https://hub.robocorp.com/development/robocode-documentation/running-robots-in-robocode-lab/).
 
-### Running with Activity Run
+### Running with Run Activity
 
 Click the `Run activity` button in the top right corner in the UI.
 Select the entry point from the provided list: use `entrypoint.sh` on macOS/Linux and `entrypoint.cmd` on Windows.
