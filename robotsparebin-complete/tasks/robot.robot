@@ -44,9 +44,9 @@ Collect The Results
 *** Keywords ***
 Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
-    ${sales_table_element}=    Get WebElement    id:sales-results
-    ${sales_table_html}=    Catenate    <h2>Sales results for this week!</h2><table>    ${sales_table_element.get_attribute("innerHTML")}    </table>
-    Create File    sales_results.template    ${sales_table_html}    overwrite=True
+    ${sales_results_element}=    Get WebElement    id:sales-results
+    ${sales_results_html}=    Catenate    <h2>Sales results for this week!</h2>    ${sales_results_element.get_attribute("innerHTML")}
+    Create File    sales_results.template    ${sales_results_html}    overwrite=True
     Template Html To Pdf    sales_results.template    sales_results.pdf
 
 *** Keywords ***
