@@ -7,8 +7,11 @@ Library           RPA.HTTP
 Library           RPA.PDF
 
 *** Keywords ***
-Open The Intranet And Log In
+Open The Intranet Website
     Open Available Browser    https://robotsparebinindustries.com/
+
+*** Keywords ***
+Log In
     Input Text    id:username    maria
     Input Password    id:password    thoushallnotpass
     Submit Form
@@ -44,8 +47,7 @@ Collect The Results
 *** Keywords ***
 Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
-    ${sales_results_element}=    Get WebElement    id:sales-results
-    ${sales_results_html}=    Catenate    <h2>Sales results for this week!</h2>    ${sales_results_element.get_attribute("innerHTML")}
+    ${sales_results_html}=    Get Element Attribute  id:sales-results   outerHTML
     Create File    sales_results.template    ${sales_results_html}    overwrite=True
     Template Html To Pdf    sales_results.template    sales_results.pdf
 
@@ -56,7 +58,8 @@ Log Out And Close The Browser
 
 *** Tasks ***
 Insert the sales data for the week and export it as a PDF
-    Open The Intranet And Log In
+    Open The Intranet Website
+    Log In
     Download The Excel File
     Fill The Form Using The Data From The Excel File
     Collect The Results
