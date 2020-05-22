@@ -47,13 +47,13 @@ Collect The Results
 *** Keywords ***
 Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
-    ${sales_results_html}=    Get Element Attribute  id:sales-results   outerHTML
+    ${sales_results_html}=    Get Element Attribute    id:sales-results    outerHTML
     Create File    sales_results.template    ${sales_results_html}    overwrite=True
     Template Html To Pdf    sales_results.template    sales_results.pdf
 
 *** Keywords ***
 Log Out And Close The Browser
-    Click button    Log out
+    Click Button    Log out
     Close Browser
 
 *** Tasks ***
