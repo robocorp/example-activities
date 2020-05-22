@@ -2,7 +2,7 @@
 
 REM Executes all tasks defined in the "tasks" directory.
 REM Writes log and report files to "output" directory.
-robot -d output --logtitle "Task log" tasks || goto :error
+python -m robot -d output --logtitle "Task log" tasks || goto :error
 
 echo Success
 goto :EOF
