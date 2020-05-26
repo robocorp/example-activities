@@ -1,0 +1,15 @@
+activities:
+  RobotSpareBin Complete:
+    output: output
+    activityRoot: .
+    action:
+      command:
+        - python
+        - -m
+        - robot
+        - -d
+        - output
+        - --logtitle
+        - Task log
+        - ./tasks/*.robot
+condaConfig: config/conda.yaml

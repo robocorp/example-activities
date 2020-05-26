@@ -1,0 +1,22 @@
+activities:
+  excel-to-work-item:
+    output: output
+    activityRoot: .
+    environment:
+      path:
+        - bin
+      pythonPath:
+        - variables
+        - libraries
+        - resources
+    action:
+      command:
+        - python
+        - -m
+        - robot
+        - -d
+        - output
+        - --logtitle
+        - Task log
+        - ./tasks/*.robot
+condaConfig: config/conda.yaml
