@@ -49,11 +49,11 @@ Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
     ${sales_results_html}=    Get Element Attribute    id:sales-results    outerHTML
     Create File    sales_results.template    ${sales_results_html}    overwrite=True
-    Template Html To Pdf    sales_results.template    sales_results.pdf
+    Template Html To Pdf    sales_results.template    ${CURDIR}${/}..${/}output${/}sales_results.pdf
 
 *** Keywords ***
 Log Out And Close The Browser
-    Click Button    Log out
+    Click button    Log out
     Close Browser
 
 *** Tasks ***
