@@ -53,7 +53,7 @@ Export The Table As A PDF
 
 *** Keywords ***
 Log Out And Close The Browser
-    Click button    Log out
+    Click Button    Log out
     Close Browser
 
 *** Tasks ***
