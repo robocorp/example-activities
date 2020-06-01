@@ -7,7 +7,7 @@ Executes Google image search and stores the first result image.
 Install Python package dependencies:
 
 ```bash
-pip install rpa-framework
+pip install rpaframework
 ```
 
 ## Executing with Robocode CLI
