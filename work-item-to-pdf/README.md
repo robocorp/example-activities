@@ -15,7 +15,7 @@ In this second activity the robot will:
 Install Python package dependencies:
 
 ```bash
-pip install rpa-framework robotframework-archivelibrary
+pip install rpaframework robotframework-archivelibrary
 ```
 
 ## Setting up the Robocloud.Items library for local use

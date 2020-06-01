@@ -13,7 +13,7 @@ In this first activity the robot will:
 Install Python package dependencies:
 
 ```bash
-pip install rpa-framework
+pip install rpaframework
 ```
 
 ## Setting up the Robocloud.Items library for local use

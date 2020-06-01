@@ -9,7 +9,7 @@ the log.
 Install Python package dependencies:
 
 ```bash
-pip install rpa-framework
+pip install rpaframework
 ```
 
 ## Executing with Robocode CLI

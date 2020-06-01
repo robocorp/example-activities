@@ -46,7 +46,7 @@ Press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click Re
 Install Python package dependencies:
 
 ```bash
-pip install rpa-framework
+pip install rpaframework
 ```
 
 Create an executable package:
