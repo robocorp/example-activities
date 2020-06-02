@@ -19,7 +19,7 @@ Log In
 
 *** Keywords ***
 Download The Excel file
-    Download    https://robotsparebinindustries.com/SalesData.xlsx    overwrite=${TRUE}
+    Download    https://robotsparebinindustries.com/SalesData.xlsx    overwrite=True
 
 *** Keywords ***
 Fill And Submit The Form For One Person
@@ -34,7 +34,7 @@ Fill And Submit The Form For One Person
 *** Keywords ***
 Fill The Form Using The Data From The Excel File
     Open Workbook    SalesData.xlsx
-    ${salesReps}=    Read Worksheet As Table    header=${TRUE}
+    ${salesReps}=    Read Worksheet As Table    header=True
     Close Workbook
     FOR    ${salesRep}    IN    @{salesReps}
         Fill And Submit The Form For One Person    ${salesRep}
