@@ -14,7 +14,7 @@ More in detail, when run, this robot will:
 - write log and report files
 - close the browser
 
-You can find more details and a full explanation of the code on Robohub: http://hub.robocorp.com/development/tutorials/rpa-form-challenge/
+You can find more details and a full explanation of the code on Robohub: https://hub.robocorp.com/knowledge-base/tutorials/rpa-form-challenge-tutorial/
 
 ## Executing with Robocode Lab
 
@@ -22,7 +22,7 @@ Robocode Lab will take care of setting up the environment for you, so you do not
 
 You can choose to run the activity in Robocode Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> For more information about running your activities in Robocode Lab, check [this article on Robohub](https://hub.robocorp.com/development/robocode-documentation/running-robots-in-robocode-lab/).
+> Visit Robohub to learn more about [running your activities in Robocode Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -31,13 +31,13 @@ Select the entry point from the provided list: use `entrypoint.sh` on macOS/Linu
 
 ### Running in Notebook mode
 
-Navigate to the tasks folder and open the `robot.robot` file in Notebook mode by right-clicking the file and selecting `Open With` -> `Notebook`.
+Navigate to the `tasks` directory and double-click the `robot.robot` file to open it in Notebook mode.
 
-Press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click Restart to run the robot.
+Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click `Restart` to run the robot.
 
 > You can also find the run command from the menu on the top of Robocode Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/development/robocode-documentation/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
 
 ## Executing with Robocode CLI
 
