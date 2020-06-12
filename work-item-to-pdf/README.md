@@ -22,7 +22,7 @@ pip install rpaframework robotframework-archivelibrary
 
 When executing our robot in a cloud environment like [Robocloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between activities defined in the same process, without any configuration needed.
 
-When developing our activity and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/libraries/rpa-framework-Robocloud-Items/).
+When developing our activity and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
 
 **If you have executed the first activity (`excel-to-work-item`), you will already have a `items.json` file on your filesystem that you can reuse here. If you have not, you can find a copy in the `/devdata` folder.**
 
@@ -61,7 +61,7 @@ Robocode Lab will take care of setting up the environment for you, so you do not
 
 You can choose to run the activity in Robocode Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> For more information about running your activities in Robocode Lab, check [this article on Robohub](https://hub.robocorp.com/development/robocode-documentation/running-robots-in-robocode-lab/).
+> Visit Robohub to learn more about [running your activities in Robocode Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -70,13 +70,13 @@ Select the entry point from the provided list: use `entrypoint.sh` on macOS/Linu
 
 ### Running in Notebook mode
 
-Navigate to the tasks folder and open the `robot.robot` file in Notebook mode by right-clicking the file and selecting `Open With` -> `Notebook`.
+Navigate to the `tasks` directory and double-click the `robot.robot` file to open it in Notebook mode.
 
-Press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click Restart to run the robot.
+Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click `Restart` to run the robot.
 
 > You can also find the run command from the menu on the top of Robocode Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/development/robocode-documentation/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
 
 ## Expected results of the activity
 
