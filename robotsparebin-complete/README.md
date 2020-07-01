@@ -1,4 +1,4 @@
-# RobotSpareBin intranet robot - starter files
+# RobotSpareBin intranet robot - finished robot
 
 This activity is the finish point of Robocorp's Beginners course on [Robohub](https://hub.robocorp.com/).
 
