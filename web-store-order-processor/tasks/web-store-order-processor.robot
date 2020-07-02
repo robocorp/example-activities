@@ -1,3 +1,4 @@
+## To run this code locally, you need to complete additional setup steps. Check the README.md file for details!
 *** Settings ***
 Documentation     Swag order robot. Places orders at https://www.saucedemo.com/
 ...               by processing a spreadsheet of orders and ordering the
