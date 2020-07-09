@@ -48,10 +48,9 @@ Collect The Results
 Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
     ${sales_results_html}=    Get Element Attribute    id:sales-results    outerHTML
-    Create File    sales_results.template    ${sales_results_html}    overwrite=True
     ${directory_exists}=    Does Directory Exist    ${CURDIR}${/}..${/}output
     Run Keyword If    ${directory_exists}==False    Create directory    ${CURDIR}${/}..${/}output
-    Template Html To Pdf    sales_results.template    ${CURDIR}${/}..${/}output${/}sales_results.pdf
+    Html To Pdf    ${sales_results_html}    ${CURDIR}${/}..${/}output${/}sales_results.pdf
 
 *** Keywords ***
 Log Out And Close The Browser
