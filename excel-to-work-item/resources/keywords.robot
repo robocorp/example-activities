@@ -8,7 +8,6 @@ Variables         variables.py
 Store invitations in work item
     Set Up And Validate
     ${invitations}=    Collect invitations from the Excel file
-    Load Work Item From Environment
     Set Work Item Variables    invitations=${invitations}
     Save Work Item
 

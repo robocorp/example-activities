@@ -20,7 +20,6 @@ Set up and validate
     Create Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}
 
 Collect invitations from work item
-    Load Work Item From Environment
     ${invitations}=    Get Work Item Variable    invitations
     [Return]    ${invitations}
 
