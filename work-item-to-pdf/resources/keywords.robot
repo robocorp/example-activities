@@ -15,21 +15,26 @@ Process invitations
     Create ZIP package from PDF files
     [Teardown]    Cleanup temporary PDF directory
 
+*** Keywords ***
 Set up and validate
     File Should Exist    ${PDF_TEMPLATE_PATH}
     Create Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}
 
+*** Keywords ***
 Collect invitations from work item
     ${invitations}=    Get Work Item Variable    invitations
     [Return]    ${invitations}
 
+*** Keywords ***
 Create PDF file for invitation
     [Arguments]    ${invitation}
     Template Html To Pdf    ${PDF_TEMPLATE_PATH}    ${PDF_TEMP_OUTPUT_DIRECTORY}/${invitation["first_name"]}_${invitation["last_name"]}.pdf    ${invitation}
 
+*** Keywords ***
 Create ZIP package from PDF files
     ${zip_file_name}=    Set Variable    ${OUTPUT_DIRECTORY}/PDFs.zip
     Create Zip From Files In Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}    ${zip_file_name}
 
+*** Keywords ***
 Cleanup temporary PDF directory
     Remove Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}    True
