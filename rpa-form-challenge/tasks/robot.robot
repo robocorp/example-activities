@@ -6,20 +6,20 @@ Library           RPA.Browser
 Library           RPA.Excel.Files
 Library           RPA.HTTP
 
-*** Keyword ***
+*** Keywords ***
 Get The List Of People From The Excel File
     Open Workbook    challenge.xlsx
     ${table}=    Read Worksheet As Table    header=True
     Close Workbook
     [Return]    ${table}
 
-*** Keyword ***
+*** Keywords ***
 Set Value By Xpath
     [Arguments]    ${xpath}    ${value}
     ${result}=    Execute Javascript    document.evaluate('${xpath}',document.body,null,9,null).singleNodeValue.value='${value}';
     [Return]    ${result}
 
-*** Keyword ***
+*** Keywords ***
 Fill And Submit The Form
     [Arguments]    ${person}
     Set Value By Xpath    //input[@ng-reflect-name="labelFirstName"]    ${person}[First Name]
@@ -31,20 +31,20 @@ Fill And Submit The Form
     Set Value By Xpath    //input[@ng-reflect-name="labelPhone"]    ${person}[Phone Number]
     Click Button    Submit
 
-*** Task ***
+*** Tasks ***
 Start The Challenge
     Open Available Browser    http://rpachallenge.com/
     Download    http://rpachallenge.com/assets/downloadFiles/challenge.xlsx    overwrite=True
     Click Button    Start
 
-*** Task ***
+*** Tasks ***
 Fill The Forms
     ${people}=    Get The List Of People From The Excel File
     FOR    ${person}    IN    @{people}
         Fill And Submit The Form    ${person}
     END
 
-*** Task ***
+*** Tasks ***
 Collect The Results
     Capture Element Screenshot    css:div.congratulations
     Close All Browsers

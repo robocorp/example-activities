@@ -6,26 +6,26 @@ Library           RPA.Browser
 ${GOOGLE_URL}     https://google.com/?hl=en
 ${SEARCH_TERM}    cute cat picture
 
-*** Keyword ***
+*** Keywords ***
 Open Google search page
     Open Available Browser    ${GOOGLE_URL}
 
-*** Keyword ***
+*** Keywords ***
 Search for
     [Arguments]    ${text}
     Input Text    name:q    ${text}
     Press Keys    name:q    ENTER
     Wait Until Page Contains    results
 
-*** Keyword ***
+*** Keywords ***
 View image search results
     Click Link    Images
 
-*** Keyword ***
+*** Keywords ***
 Screenshot first result
     Capture Element Screenshot    css:div[data-ri="0"]
 
-*** Task ***
+*** Tasks ***
 Execute Google image search and store the first result image
     Open Google search page
     Search for    ${SEARCH_TERM}

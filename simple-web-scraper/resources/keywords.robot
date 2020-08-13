@@ -4,7 +4,7 @@ Library           OperatingSystem
 Library           RPA.Browser
 Variables         variables.py
 
-*** Keyword ***
+*** Keywords ***
 Store web page content
     ${current_date}=    Current date
     Log    ${current_date}

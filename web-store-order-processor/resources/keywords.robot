@@ -4,7 +4,7 @@ Library           Orders
 Library           RPA.Browser
 Variables         variables.py
 
-*** Keyword ***
+*** Keywords ***
 Process orders
     Validate prerequisites
     Open Swag Labs
@@ -15,7 +15,7 @@ Process orders
     END
     [Teardown]    Close Browser
 
-*** Keyword ***
+*** Keywords ***
 Validate prerequisites
     File Should Exist    ${EXCEL_FILE_PATH}
     Variable Should Exist    ${SWAG_LABS_USER_NAME}
@@ -23,11 +23,11 @@ Validate prerequisites
     Variable Should Exist    ${SWAG_LABS_PASSWORD}
     Should Not Be Empty    ${SWAG_LABS_PASSWORD}
 
-*** Keyword ***
+*** Keywords ***
 Open Swag Labs
     Open Available Browser    ${SWAG_LABS_URL}
 
-*** Keyword ***
+*** Keywords ***
 Login
     [Arguments]    ${user_name}    ${password}
     Input Text    user-name    ${user_name}
@@ -35,17 +35,17 @@ Login
     Submit Form
     Assert logged in
 
-*** Keyword ***
+*** Keywords ***
 Assert logged in
     Wait Until Page Contains Element    inventory_container
     Location Should Be    ${SWAG_LABS_URL}/inventory.html
 
-*** Keyword ***
+*** Keywords ***
 Collect orders
     ${orders}=    Get orders    ${EXCEL_FILE_PATH}
     [Return]    ${orders}
 
-*** Keyword ***
+*** Keywords ***
 Process order
     [Arguments]    ${order}
     Reset application state
@@ -57,22 +57,22 @@ Process order
     Checkout    ${order}
     Open products page
 
-*** Keyword ***
+*** Keywords ***
 Reset application state
     Click Button    css:.bm-burger-button button
     Wait Until Element Is Visible    id:reset_sidebar_link
     Click Link    reset_sidebar_link
 
-*** Keyword ***
+*** Keywords ***
 Open products page
     Go To    ${SWAG_LABS_URL}/inventory.html
 
-*** Keyword ***
+*** Keywords ***
 Assert cart is empty
     Element Text Should Be    css:.shopping_cart_link    ${EMPTY}
     Page Should Not Contain Element    css:.shopping_cart_badge
 
-*** Keyword ***
+*** Keywords ***
 Add product to cart
     [Arguments]    ${order}
     ${product_name}=    Set Variable    ${order["item"]}
@@ -82,28 +82,28 @@ Add product to cart
     Click Button    ${add_to_cart_button}
     Assert items in cart    1
 
-*** Keyword ***
+*** Keywords ***
 Assert items in cart
     [Arguments]    ${quantity}
     Element Text Should Be    css:.shopping_cart_badge    ${quantity}
 
-*** Keyword ***
+*** Keywords ***
 Open cart
     Click Link    css:.shopping_cart_link
     Assert cart page
 
-*** Keyword ***
+*** Keywords ***
 Assert cart page
     Wait Until Page Contains Element    cart_contents_container
     Location Should Be    ${SWAG_LABS_URL}/cart.html
 
-*** Keyword ***
+*** Keywords ***
 Assert one product in cart
     [Arguments]    ${order}
     Element Text Should Be    css:.cart_quantity    1
     Element Text Should Be    css:.inventory_item_name    ${order["item"]}
 
-*** Keyword ***
+*** Keywords ***
 Checkout
     [Arguments]    ${order}
     Click Link    css:.checkout_button
@@ -117,17 +117,17 @@ Checkout
     Click Link    css:.btn_action
     Assert checkout complete page
 
-*** Keyword ***
+*** Keywords ***
 Assert checkout information page
     Wait Until Page Contains Element    checkout_info_container
     Location Should Be    ${SWAG_LABS_URL}/checkout-step-one.html
 
-*** Keyword ***
+*** Keywords ***
 Assert checkout confirmation page
     Wait Until Page Contains Element    checkout_summary_container
     Location Should Be    ${SWAG_LABS_URL}/checkout-step-two.html
 
-*** Keyword ***
+*** Keywords ***
 Assert checkout complete page
     Wait Until Page Contains Element    checkout_complete_container
     Location Should Be    ${SWAG_LABS_URL}/checkout-complete.html
