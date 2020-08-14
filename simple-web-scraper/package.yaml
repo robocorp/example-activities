@@ -12,7 +12,9 @@ activities:
         - python
         - -m
         - robot
-        - -d
+        - --report
+        - NONE
+        - --outputdir
         - output
         - --logtitle
         - Task log
