@@ -60,8 +60,7 @@ Process order
 *** Keywords ***
 Reset application state
     Click Button    css:.bm-burger-button button
-    Wait Until Element Is Visible    id:reset_sidebar_link
-    Click Link    reset_sidebar_link
+    Click Element When Visible    id:reset_sidebar_link
 
 *** Keywords ***
 Open products page
@@ -113,8 +112,7 @@ Checkout
     Input Text    postal-code    ${order["zip"]}
     Submit Form
     Assert checkout confirmation page
-    Wait Until Page Contains Element    css:.btn_action
-    Click Link    css:.btn_action
+    Click Element When Visible    css:.btn_action
     Assert checkout complete page
 
 *** Keywords ***
