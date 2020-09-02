@@ -23,7 +23,7 @@ View image search results
 
 *** Keywords ***
 Screenshot first result
-    Capture Element Screenshot    css:div[data-ri="0"]
+    Capture Element Screenshot    css:div[data-ri="0"]    ${OUTPUT DIR}${/}screenshot.png
 
 *** Tasks ***
 Execute Google image search and store the first result image
