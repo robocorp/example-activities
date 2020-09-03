@@ -20,7 +20,7 @@ pip install rpaframework robotframework-archivelibrary
 
 ## Setting up the Robocloud.Items library for local use
 
-When executing our robot in a cloud environment like [Robocloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between activities defined in the same process, without any configuration needed.
+When executing our robot in a cloud environment like [Robocorp Cloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between activities defined in the same process, without any configuration needed.
 
 When developing our activity and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
 
@@ -29,9 +29,9 @@ When developing our activity and running it locally, however, we want the librar
 Edit the `RPA_WORKITEMS_PATH` variable to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths,
 for example, `/tmp/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
 
-> By pointing to the same file that we used in the first activity and by specifying the same workspace and work item id, we are now effectively sharing data between the two activities. This way, we are simulating what happens in [Robocloud](https://cloud.robocorp.com) when two activities are added to the same process.
+> By pointing to the same file that we used in the first activity and by specifying the same workspace and work item id, we are now effectively sharing data between the two activities. This way, we are simulating what happens in [Robocorp Cloud](https://cloud.robocorp.com) when two activities are added to the same process.
 
-## Executing with Robocode CLI
+## Executing with Robocorp CLI
 
 > Assumes `robocode` is installed. Install with `pip install robocode`.
 
@@ -55,13 +55,13 @@ macOS / Linux:
 robo run entrypoint.sh -v devdata/env.json
 ```
 
-## Executing with Robocode Lab
+## Executing with Robocorp Lab
 
-Robocode Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
+Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
 
-You can choose to run the activity in Robocode Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the activity in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocode Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -74,12 +74,12 @@ Navigate to the `tasks` directory and double-click the `robot.robot` file to ope
 
 Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click `Restart` to run the robot.
 
-> You can also find the run command from the menu on the top of Robocode Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
+> You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
 > In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
 
 ## Expected results of the activity
 
-After you run the robot, you will find a zip archive `PDFs.zip` file in the `temp/robocode/work-item-to-pdf/output` directory, or the `output` directory if executing the example activity in Robocode Lab in notebook mode.
+After you run the robot, you will find a zip archive `PDFs.zip` file in the `temp/robocode/work-item-to-pdf/output` directory, or the `output` directory if executing the example activity in Robocorp Lab in notebook mode.
 
 Extract it and you will see the PDF invitations according to the data in the Excel file.
