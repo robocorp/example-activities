@@ -1,3 +1,9 @@
+# ## Google Image Search Example
+# This simple robot will execute a Google Image Search and save the first result image.
+#
+# In Robocorp Lab, click on the `>>` button above to run the whole example, or you can execute each cell by using the `>` button.
+
+
 *** Settings ***
 Documentation     Executes Google image search and stores the first result image.
 Library           RPA.Browser
