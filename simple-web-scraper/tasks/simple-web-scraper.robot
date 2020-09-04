@@ -1,3 +1,6 @@
+# ## Simple web scraper Example
+# Opens a web page and stores some content.
+
 *** Settings ***
 Documentation     An example activity. Opens a web page and stores some content.
 ...               The web page text is stored in the "output" directory.

@@ -1,3 +1,10 @@
+# ## Beginners' course - complete example
+#
+# This example is the end result of our <a href="https://hub.robocorp.com/knowledge-base/courses/beginners-course/welcome/">beginners' course</a>.
+#
+# Take the course to learn all about this! :)
+#
+
 *** Settings ***
 Documentation     Robot to enter weekly sales data into the RobotSpareBin Industries Intranet.
 Library           RPA.Browser

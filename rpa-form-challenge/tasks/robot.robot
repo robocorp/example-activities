@@ -1,3 +1,12 @@
+# ## RPA Form Challenge example
+#
+# Run this example to solve the form challenge at http://rpachallenge.com/.
+#
+# Get the full tutorial and explanation <a href="https://hub.robocorp.com/knowledge-base/tutorials/rpa-form-challenge-tutorial/">on our site</a>.
+#
+# In Robocorp Lab, click on the `>>` button above to run the whole example, or you can execute each cell by using the `>` button.
+#
+
 *** Settings ***
 Documentation     Robot to solve the first challenge at rpachallenge.com, which consists of
 ...               filling a form that randomly rearranges itself for ten times, with data
