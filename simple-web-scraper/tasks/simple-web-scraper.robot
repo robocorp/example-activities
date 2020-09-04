@@ -5,8 +5,19 @@
 Documentation     An example activity. Opens a web page and stores some content.
 ...               The web page text is stored in the "output" directory.
 ...               An image screenshot is embedded in the log.
-Resource          keywords.robot
+Library           ExampleLibrary
+Library           OperatingSystem
+Library           RPA.Browser
+
+*** Variables ***
+${URL}            https://robotframework.org/
 
 *** Tasks ***
-Store web page content
-    Store web page content
+Store Web Page Content
+    Open Available Browser    ${URL}
+    Click Link    Examples
+    Click Link    Libraries
+    ${text}=    Get Text    scroller
+    Create File    ${OUTPUT DIR}${/}text.txt    ${text}
+    Capture Element Screenshot    css:.img-fluid
+    [Teardown]    Close Browser
