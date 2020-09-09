@@ -1,4 +1,4 @@
-# ## Simple web scraper Example
+# ## Simple web scraper example
 # Opens a web page and stores some content.
 
 *** Settings ***
@@ -15,8 +15,6 @@ ${URL}            https://robotframework.org/
 *** Tasks ***
 Store Web Page Content
     Open Available Browser    ${URL}
-    Click Link    Examples
-    Click Link    Libraries
     ${text}=    Get Text    scroller
     Create File    ${OUTPUT DIR}${/}text.txt    ${text}
     Capture Element Screenshot    css:.img-fluid
