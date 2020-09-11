@@ -1,6 +1,6 @@
 # RobotSpareBin intranet robot - starter files
 
-This robot is the starting point of Robocorp's [Beginners' course](https://hub.robocorp.com/).
+This robot is the starting point of Robocorp's [Beginners' course](https://hub.robocorp.com/knowledge-base/courses/beginners-course/welcome/).
 
 Check the `robotsparebin-intranet-complete` robot for the finished version of the robot.
 

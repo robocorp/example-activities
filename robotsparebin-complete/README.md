@@ -1,6 +1,6 @@
 # RobotSpareBin intranet robot - finished robot
 
-This robot is the finish point of Robocorp's [Beginners' course](https://hub.robocorp.com/).
+This robot is the finish point of Robocorp's [Beginners' course](https://hub.robocorp.com/knowledge-base/courses/beginners-course/welcome/).
 
 Check the `robotsparebin-intranet-starter` robot for the initial version of the robot.
 
