@@ -1,4 +1,4 @@
-# RPA Form challenge example activity
+# RPA Form challenge example robot
 
 This robot will solve the form challenge posted at http://rpachallenge.com.
 
@@ -14,15 +14,15 @@ More in detail, when run, this robot will:
 - write log and report files
 - close the browser
 
-You can find more details and a full explanation of the code on Robohub: https://hub.robocorp.com/knowledge-base/tutorials/rpa-form-challenge-tutorial/
+You can find more details and a full explanation of the code on [Robocorp documentation](https://hub.robocorp.com/knowledge-base/tutorials/rpa-form-challenge-tutorial/)
 
 ## Executing with Robocorp Lab
 
 Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
 
-You can choose to run the activity in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -37,16 +37,16 @@ Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Ente
 
 > You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
 
 ## Executing with Robocorp CLI
 
-> Assumes `robocode` is installed. Install with `pip install robocode`.
+> Assumes `robocode` is installed. Install with `pip install --upgrade robocode`.
 
 Install Python package dependencies:
 
 ```bash
-pip install rpaframework
+pip install --upgrade rpaframework
 ```
 
 Create an executable package:
@@ -55,7 +55,7 @@ Create an executable package:
 robo wrap
 ```
 
-Execute the activity using the local environment variables file:
+Execute the robot using the local environment variables file:
 
 Windows:
 

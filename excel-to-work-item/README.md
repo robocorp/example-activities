@@ -1,8 +1,8 @@
-# Excel to work item example activity
+# Excel to work item example robot
 
-This activity is meant to be used in combination with the `work-item-to-pdf` activity, as the first step of a process to print PDF invitations starting from an Excel file.
+This robot is meant to be used in combination with the `work-item-to-pdf` robot, as the first step of a process to print PDF invitations starting from an Excel file.
 
-In this first activity the robot will:
+This robot will:
 
 - collect the data from an Excel file
 - process the data into the correct format
@@ -13,16 +13,16 @@ In this first activity the robot will:
 Install Python package dependencies:
 
 ```bash
-pip install rpaframework
+pip install --upgrade rpaframework
 ```
 
 ## Setting up the Robocloud.Items library for local use
 
-When executing our robot in a cloud environment like [Robocorp Cloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between activities defined in the same process, without any configuration needed.
+When executing our robot in a cloud environment like [Robocorp Cloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between robots defined in the same process, without any configuration needed.
 
-When developing our activity and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
+When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
 
-Create a new file called `items.json` on your file system, for example at `/tmp/items.json`.
+Create a new file called `items.json` on your file system, for example at `/Users/<username>/items.json`.
 
 Paste this content into your `items.json` file, creating an empty but valid json file:
 
@@ -31,11 +31,11 @@ Paste this content into your `items.json` file, creating an empty but valid json
 ```
 
 Edit the `RPA_WORKITEMS_PATH` variable to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths,
-for example, `/tmp/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
+for example, `/Users/<username>/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
 
 ## Executing with Robocorp CLI
 
-> Assumes `robocode` is installed. Install with `pip install robocode`.
+> Assumes `robocode` is installed. Install with `pip install --upgrade robocode`.
 
 Create an executable package:
 
@@ -43,7 +43,7 @@ Create an executable package:
 robo wrap
 ```
 
-Execute the activity using the local environment variables file:
+Execute the robot using the local environment variables file:
 
 Windows:
 
@@ -61,9 +61,9 @@ robo run entrypoint.sh -v devdata/env.json
 
 Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
 
-You can choose to run the activity in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -78,11 +78,11 @@ Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Ente
 
 > You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
 
-## Expected results of the activity
+## Expected results of the robot
 
-After running the activity, your `items.json` file should have been filled with the data from the provided Excel file:
+After running the robot, your `items.json` file should have been filled with the data from the provided Excel file:
 
 ```json
 {

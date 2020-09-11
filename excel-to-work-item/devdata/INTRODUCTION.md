@@ -3,7 +3,7 @@
 This directory should contain local development data.
 
 This data should not be used in actual Robocorp App run but can be
-used when you are building and debugging your entrypoints and activities.
+used when you are building and debugging your entrypoints and robots.
 
 ## What to put here?
 
