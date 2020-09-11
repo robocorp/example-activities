@@ -3,7 +3,6 @@
 #
 # In Robocorp Lab, click on the `>>` button above to run the whole example, or you can execute each cell by using the `>` button.
 
-
 *** Settings ***
 Documentation     Executes Google image search and stores the first result image.
 Library           RPA.Browser
@@ -13,8 +12,14 @@ ${GOOGLE_URL}     https://google.com/?hl=en
 ${SEARCH_TERM}    cute cat picture
 
 *** Keywords ***
+Accept Google Consent
+    Select Frame    //iframe[contains(@src, "https://consent.google.com")]
+    Click Element    //div[@id="introAgreeButton"]
+
+*** Keywords ***
 Open Google search page
     Open Available Browser    ${GOOGLE_URL}
+    Run Keyword And Ignore Error    Accept Google Consent
 
 *** Keywords ***
 Search for
