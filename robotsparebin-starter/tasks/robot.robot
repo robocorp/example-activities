@@ -6,7 +6,7 @@
 #
 
 *** Settings ***
-Documentation     Starter robot for the Beginners' course in Robohub.
+Documentation     Starter robot for the Beginners' course.
 
 *** Tasks ***
 Say hello to the world

@@ -1,14 +1,14 @@
 # RobotSpareBin intranet robot - finished robot
 
-This activity is the finish point of Robocorp's Beginners course on [Robohub](https://hub.robocorp.com/).
+This robot is the finish point of Robocorp's [Beginners' course](https://hub.robocorp.com/knowledge-base/courses/beginners-course/welcome/).
 
-Check the `robotsparebin-intranet-starter` activity for the initial version of the robot.
+Check the `robotsparebin-intranet-starter` robot for the initial version of the robot.
 
 ## Executing with Robocorp Lab
 
-You can choose to run the activity in Robocorp Lab in two different modes, using the _Run activity_ functionality or in _Notebook mode_.
+You can choose to run the robot in Robocorp Lab in two different modes, using the _Run activity_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Run Activity
 
@@ -23,4 +23,4 @@ Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Ente
 
 > You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.

@@ -1,6 +1,6 @@
-# A simple web scraper example activity
+# A simple web scraper example robot
 
-An example activity. Opens a web page and stores some content. The web page
+An example robot. Opens a web page and stores some content. The web page
 text is stored in the "output" directory. An image screenshot is embedded in
 the log.
 
@@ -9,7 +9,7 @@ the log.
 Install Python package dependencies:
 
 ```bash
-pip install rpaframework
+pip install --upgrade rpaframework
 ```
 
 ## Executing with Robocorp CLI
@@ -40,9 +40,9 @@ robo run entrypoint.sh
 
 Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
 
-You can choose to run the activity in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -57,4 +57,4 @@ Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Ente
 
 > You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.

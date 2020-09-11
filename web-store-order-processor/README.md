@@ -1,4 +1,4 @@
-# Web store order processor example activity
+# Web store order processor example robot
 
 Swag order robot. Places orders at https://www.saucedemo.com/ by processing a
 spreadsheet of orders and ordering the specified products using browser
@@ -9,7 +9,7 @@ automation. Uses local or cloud vault for credentials.
 Install Python package dependencies:
 
 ```bash
-pip install rpaframework
+pip install --upgrade rpaframework
 ```
 
 ## Configure local vault
@@ -36,10 +36,10 @@ Paste this content in the vault file:
 
 In `devdata/env.json`, edit the `RPA_SECRET_FILE` variable to point to the
 `vault.json` file on your filesystem. On macOS / Linux, use normal file paths,
-for example, `"/tmp/vault.json"`. On Windows 10, you need to escape the path, for
+for example, `"/Users/<username>/vault.json"`. On Windows 10, you need to escape the path, for
 example, `"C:\\Users\\User\\vault.json"`.
 
-### Robocloud
+### Robocorp Cloud
 
 Configure your vault using the UI. The name of the vault should be `swaglabs`.
 Provide the user name and the password as key-value pairs (see the vault file
@@ -47,7 +47,7 @@ for the exact naming).
 
 ## Executing with Robocorp CLI
 
-> Assumes `robocode` is installed. Install with `pip install robocode`.
+> Assumes `robocode` is installed. Install with `pip install --upgrade robocode`.
 
 Create an executable package:
 
@@ -55,7 +55,7 @@ Create an executable package:
 robo wrap
 ```
 
-Execute the activity using the local environment variables file:
+Execute the robot using the local environment variables file:
 
 Windows:
 
@@ -73,9 +73,9 @@ robo run entrypoint.sh -v devdata/env.json
 
 Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
 
-You can choose to run the activity in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
+You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
 
-> Visit Robohub to learn more about [running your activities in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
+> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
 
 ### Running with Activity Run
 
@@ -90,4 +90,4 @@ Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Ente
 
 > You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
 
-> In Notebook mode you can also run only part of an activity step by step. Check [this article on Robohub](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
