@@ -1,0 +1,23 @@
+activities:
+  entrypoint:
+    output: output
+    activityRoot: .
+    environment:
+      path:
+        - .
+      pythonPath:
+        - .
+    action:
+      command:
+        - python
+        - -m
+        - robot
+        - -d
+        - output
+        - --logtitle
+        - Task log
+        - robot.robot
+
+condaConfig: conda.yaml
+ignoreFiles:
+    - .gitignore
