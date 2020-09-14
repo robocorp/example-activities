@@ -1,5 +1,5 @@
 activities:
-  entrypoint:
+  my-first-robot:
     output: output
     activityRoot: .
     environment:
