@@ -6,35 +6,34 @@
 # This tutorial guides you through some of the basic ideas
 # and features related to software robot development with Lab.
 #
-# By default in Robocorp Lab you implement robots in notebook format.
-# This document as any other notebook integrates code and its output.
+# In Lab you implement robots using the notebook format, which integrates the code and its output.
 #
-# Two basic ways to run the code are:
+# The two basic ways to run the code are:
 # - run the whole notebook - `▸▸`
 # - run just a single code cell - `▸`
 #
-# Additionally you can run the whole robot in isolation with the `▸ Run Robot` button in the app toolbar.
-# It is similar how Robocorp Cloud and Robocorp App would run the robot.
-# Use it when testing out the final solution.
+# Additionally you can run the whole robot in isolation with the `▸ Run Robot` button in the app toolbar: this will simulate how Robocorp Cloud and Robocorp App would run the robot.
+# Use it when testing out the finished robot.
 #
 # ### Step 1. Importing libraries and running a cell
 #
-# There are following cell types:
+# These are the possible cell types:
 # * `*** Settings ***`
 # * `*** Variables ***`
 # * `*** Keywords ***`
 # * `*** Tasks ***`
 #
-# Keyword libraries and other configuration can be done in `*** Settings ***` section.
+# To run a cell, click on it and press `▸` to evaluate it (keyboard shortcut: shift-enter). If you make changes to a cell, you need to evaluate it again.
 #
-# To apply changes, click on a cell and press `▸`. Keyboard shortcut: shift-enter. After that you have access to the keywords provided by the libraries.
+# Importing keyword libraries and other configuration can be done in the `*** Settings ***` section. The keywords become available once you evaluate the `*** Settings ***` cell. 
 #
+# Click the `*** Settings ***` cell below and evaluate it now:
 
 *** Settings ***
-Documentation   An example robot.
-Library         RPA.Browser
-Library         RPA.core.notebook
-Task Teardown   Close All Browsers
+Documentation     An example robot.
+Library           RPA.Browser
+Library           RPA.core.notebook
+Task Teardown     Close All Browsers
 
 # ### Step 2. Editing a cell
 #
@@ -43,13 +42,14 @@ Task Teardown   Close All Browsers
 
 *** Keyword ***
 Say Hello
-    Notebook Print  Hello!
+    Notebook Print    Hello!
 
-# Now try to change the `Hello!` to something more appealing maybe.
+# Now try to change the `Hello!` to something else.
 #
-# `NOTE` There need to be at least two (2) spaces between a keyword and an argument.
+# `NOTE` There need to be at least two (2) spaces between a keyword and its arguments.
 #
-# To apply changes, click on a cell and press `▸`. Keyboard shortcut: shift-enter.
+# To apply your changes, click on the cell and press `▸`. You will see a `Say Hello` button.
+#
 
 # ### Step 3. Running a single cell from a button
 #
@@ -57,39 +57,40 @@ Say Hello
 #
 # `NOTE` When modifying the cell always remember to apply changes with `▸`.
 #
-#
 # ### Step 4. Modify and run another cell
 #
-# Run the next cell below (`▸` or shift-enter) and then press the `Find Image` button below it. You should see a nice picture.
+# Run the next cell below (`▸` or shift-enter) and then press the `Find Image` button below it. You should see a nice picture!
 #
-# Now, change `cute little puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Sounds familiar, right?
+# Now, change `cute little puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Now you should see a different picture!
 
 *** Keyword ***
 Find Image
-    Open Available Browser  https://images.google.com
-    Input Text   name:q  cute little puppy
+    Open Available Browser    https://images.google.com
+    Input Text    name:q    cute little puppy
     Submit Form
     Capture Element Screenshot    css:div[data-ri="0"]  # Here we use locator to find the first image
 
 # ### Step 5. Running the whole notebook
 #
-# Finally, the `*** Tasks ***` section is an entrypoint to our robot. When the whole robot is run in Robocorp Cloud or Robocorp App, that's the only cell it'll be looking for.
+# Finally, the `*** Tasks ***` section is the entrypoint to our robot, that will be run when our robot is executed in Robocorp Cloud or Robocorp App.
 #
-# Add the keyword `Find Image` below `Say Hello` (remember the intendation) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` and the notebook runs.
-#
-# You should see the image printed out.
+# A task executes keywords in sequence. Add the keyword `Find Image` below the `Say Hello` keyword (remember the indentation!) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` : the whole notebook will run and you should see your image printed out.
 
 *** Tasks ***
 This is my task
     Say Hello
-    # This is a placeholder for Find Image
+    # Uncomment the next line to add the Find Image keyword:
+    # Find Image
+    
 
-# ### Step 6. Upload robot to Robocorp Cloud
+# ### Step 6. Upload the robot to Robocorp Cloud
 #
 # Finally, let's upload our robot to Robocorp Cloud so that it can be run on a schedule either in cloud or maybe in another machine.
 #
-# At first, make sure you have an account in Robocorp Cloud and have linked Lab to it from Welcome Screen. You also need an existing Robot in cloud so that we can update the contents of it from the Lab. Create either a new robot or use existing example project but please note the content will be overwritten.
+# Make sure you have an account in Robocorp Cloud and you have linked Robocorp Lab to it using the button on the Welcome Screen. 
 #
-# Push `Publish to Robocorp Cloud` in the tool bar, select a workspace and an existing robot and hit `Publish`.
+# An example workspace, process and robot have been created automatically with your account.
 #
-# You now have the robot available for use in Robocorp Cloud!
+# Push the `Publish to Robocorp Cloud` button in the tool bar, select your example workspace, the `Google Image Search` robot inside it and hit `Publish`.
+#
+# You now have the robot available for use in Robocorp Cloud, go there and run it!
