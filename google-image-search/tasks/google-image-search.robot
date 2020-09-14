@@ -14,7 +14,7 @@ ${SEARCH_TERM}    cute cat picture
 *** Keywords ***
 Accept Google Consent
     Select Frame    //iframe[contains(@src, "https://consent.google.com")]
-    Click Element    //div[@id="introAgreeButton"]
+    Click Element    id:introAgreeButton
 
 *** Keywords ***
 Open Google search page
