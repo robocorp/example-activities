@@ -1,5 +1,5 @@
 activities:
-  my-first-robot:
+  Image search:
     output: output
     activityRoot: .
     environment:
