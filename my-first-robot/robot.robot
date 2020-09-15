@@ -27,7 +27,7 @@
 #
 # Importing keyword libraries and other configuration can be done in the `*** Settings ***` section. The keywords become available once you evaluate the `*** Settings ***` cell. 
 #
-# Click the `*** Settings ***` cell below and evaluate it now:
+# **Click the `*** Settings ***` cell below and evaluate it now:**
 
 *** Settings ***
 Documentation     An example robot.
