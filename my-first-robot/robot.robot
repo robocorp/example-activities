@@ -61,20 +61,20 @@ Show Greeting
 #
 # Run the next cell below (`▸` or shift-enter) and then press the `Find Image` button below it. You should see a nice picture!
 #
-# Now, change `cute little puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Now you should see a different picture!
+# Now, change `cute puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Now you should see a different picture!
 
 *** Keyword ***
 Find Image
     Open Available Browser    https://images.google.com
-    Input Text    name:q    cute little puppy
+    Input Text    name:q    cute puppy
     Submit Form
     Capture Element Screenshot    css:div[data-ri="0"]  # Here we use locator to find the first image
 
 # ### Step 5. Running the whole notebook
 #
-# Finally, the `*** Tasks ***` section is the entrypoint to our robot, that will be run when our robot is executed in Robocorp Cloud or Robocorp App.
+# Finally, the `*** Tasks ***` section is the starting point of our robot when it runs in Robocorp Cloud or Robocorp App.
 #
-# A task executes keywords in sequence. Add the keyword `Find Image` below the `Say Hello` keyword (remember the indentation!) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` : the whole notebook will run and you should see your image printed out.
+# A task executes keywords in sequence. Add the keyword `Find Image` below the `Show Greeting` keyword (remember the indentation!) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` : the whole notebook will run and you should see your image printed out.
 
 *** Tasks ***
 This is my task
