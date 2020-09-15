@@ -41,19 +41,19 @@ Task Teardown     Close All Browsers
 #
 
 *** Keyword ***
-Say Hello
+Show Greeting
     Notebook Print    Hello!
 
 # Now try to change the `Hello!` to something else.
 #
 # `NOTE` There need to be at least two (2) spaces between a keyword and its arguments.
 #
-# To apply your changes, click on the cell and press `▸`. You will see a `Say Hello` button.
+# To apply your changes, click on the cell and press `▸`. You will see a `Show Greeting` button.
 #
 
 # ### Step 3. Running a single cell from a button
 #
-# Run the single keyword from the button below it, `Say Hello`.
+# Run the single keyword from the button below it, `Show Greeting`.
 #
 # `NOTE` When modifying the cell always remember to apply changes with `▸`.
 #
@@ -78,10 +78,10 @@ Find Image
 
 *** Tasks ***
 This is my task
-    Say Hello
+    Show Greeting
     # Uncomment the next line to add the Find Image keyword:
     # Find Image
-    
+
 
 # ### Step 6. Upload the robot to Robocorp Cloud
 #
