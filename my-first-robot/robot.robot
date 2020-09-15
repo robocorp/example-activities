@@ -27,7 +27,7 @@
 #
 # Importing keyword libraries and other configuration can be done in the `*** Settings ***` section. The keywords become available once you evaluate the `*** Settings ***` cell. 
 #
-# Click the `*** Settings ***` cell below and evaluate it now:
+# **Click the `*** Settings ***` cell below and evaluate it now:**
 
 *** Settings ***
 Documentation     An example robot.
@@ -41,19 +41,19 @@ Task Teardown     Close All Browsers
 #
 
 *** Keyword ***
-Say Hello
+Show Greeting
     Notebook Print    Hello!
 
 # Now try to change the `Hello!` to something else.
 #
 # `NOTE` There need to be at least two (2) spaces between a keyword and its arguments.
 #
-# To apply your changes, click on the cell and press `▸`. You will see a `Say Hello` button.
+# To apply your changes, click on the cell and press `▸`. You will see a `Show Greeting` button.
 #
 
 # ### Step 3. Running a single cell from a button
 #
-# Run the single keyword from the button below it, `Say Hello`.
+# Run the single keyword from the button below it, `Show Greeting`.
 #
 # `NOTE` When modifying the cell always remember to apply changes with `▸`.
 #
@@ -61,27 +61,27 @@ Say Hello
 #
 # Run the next cell below (`▸` or shift-enter) and then press the `Find Image` button below it. You should see a nice picture!
 #
-# Now, change `cute little puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Now you should see a different picture!
+# Now, change `cute puppy` to your (another) favorite animal, run the cell `▸` and press the `Find Image` button. Now you should see a different picture!
 
 *** Keyword ***
 Find Image
     Open Available Browser    https://images.google.com
-    Input Text    name:q    cute little puppy
+    Input Text    name:q    cute puppy
     Submit Form
     Capture Element Screenshot    css:div[data-ri="0"]  # Here we use locator to find the first image
 
 # ### Step 5. Running the whole notebook
 #
-# Finally, the `*** Tasks ***` section is the entrypoint to our robot, that will be run when our robot is executed in Robocorp Cloud or Robocorp App.
+# Finally, the `*** Tasks ***` section is the starting point of our robot when it runs in Robocorp Cloud or Robocorp App.
 #
-# A task executes keywords in sequence. Add the keyword `Find Image` below the `Say Hello` keyword (remember the indentation!) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` : the whole notebook will run and you should see your image printed out.
+# A task executes keywords in sequence. Add the keyword `Find Image` below the `Show Greeting` keyword (remember the indentation!) and run the whole notebook with `▸▸` or ctrl-shift-enter (cmd-shift-enter on macOS). Click `Restart` : the whole notebook will run and you should see your image printed out.
 
 *** Tasks ***
 This is my task
-    Say Hello
+    Show Greeting
     # Uncomment the next line to add the Find Image keyword:
     # Find Image
-    
+
 
 # ### Step 6. Upload the robot to Robocorp Cloud
 #
