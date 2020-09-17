@@ -1,0 +1,11 @@
+[
+    {
+        "id": 0,
+        "name": "Google.FirstImage",
+        "type": "browser",
+        "strategy": "css",
+        "value": "div[data-ri=\"0\"]",
+        "source": "",
+        "screenshot": ""
+    }
+]

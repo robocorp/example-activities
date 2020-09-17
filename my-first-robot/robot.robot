@@ -53,7 +53,7 @@ Show Greeting
 
 # ### Step 3. Running a single cell from a button
 #
-# Run the single keyword from the button below it, `Show Greeting`.
+# Run the single keyword above from the button below it, `Show Greeting`.
 #
 # `NOTE` When modifying the cell always remember to apply changes with `▸`.
 #
@@ -68,7 +68,7 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
-    Capture Element Screenshot    css:div[data-ri="0"]  # Here we use locator to find the first image
+    Capture Element Screenshot    alias:Google.FirstImage  # Here we use a UI Locator to find the first image.
 
 # ### Step 5. Running the whole notebook
 #
@@ -83,9 +83,11 @@ This is my task
     # Find Image
 
 
-# ### Step 6. Upload the robot to Robocorp Cloud
+# ### Step 6. Save your work and upload the robot to Robocorp Cloud
 #
 # Finally, let's upload our robot to Robocorp Cloud so that it can be run on a schedule either in cloud or maybe in another machine.
+#
+# First, **save your changes to the file**: select`File`->`Save All` from the menu toolbar, or press **control+s** (**command+s** on macOS).
 #
 # Make sure you have an account in Robocorp Cloud and you have linked Robocorp Lab to it using the button on the Welcome Screen. 
 #
@@ -93,4 +95,4 @@ This is my task
 #
 # Push the `Publish to Robocorp Cloud` button in the tool bar, select your example workspace, the `Google Image Search` robot inside it and hit `Publish`.
 #
-# You now have the robot available for use in Robocorp Cloud, go there and run it!
+# You have now overwritten the example robot in the cloud with your updated version, go there and run it!
