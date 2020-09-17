@@ -37,7 +37,7 @@ Task Teardown     Close All Browsers
 
 # ### Step 2. Editing a cell
 #
-# In the next cell we declare a new keyword called "Say Hello", which prints a simple greeting.
+# In the next cell we declare a new keyword called "Show Greeting", which prints a simple greeting.
 #
 
 *** Keyword ***
