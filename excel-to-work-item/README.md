@@ -8,19 +8,11 @@ This robot will:
 - process the data into the correct format
 - add the data to the work item and exit
 
-## Setup
-
-Install Python package dependencies:
-
-```bash
-pip install --upgrade rpaframework
-```
-
 ## Setting up the Robocloud.Items library for local use
 
 When executing our robot in a cloud environment like [Robocorp Cloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between robots defined in the same process, without any configuration needed.
 
-When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
+When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://robocorp.com/docs/product-manuals/robocorp-cloud/using-robocloud-items-library).
 
 Create a new file called `items.json` on your file system, for example at `/Users/<username>/items.json`.
 
@@ -30,55 +22,7 @@ Paste this content into your `items.json` file, creating an empty but valid json
 {}
 ```
 
-Edit the `RPA_WORKITEMS_PATH` variable to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths,
-for example, `/Users/<username>/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
-
-## Executing with Robocorp CLI
-
-> Assumes `robocode` is installed. Install with `pip install --upgrade robocode`.
-
-Create an executable package:
-
-```bash
-robo wrap
-```
-
-Execute the robot using the local environment variables file:
-
-Windows:
-
-```bash
-robo run entrypoint.cmd -v devdata\env.json
-```
-
-macOS / Linux:
-
-```bash
-robo run entrypoint.sh -v devdata/env.json
-```
-
-## Executing with Robocorp Lab
-
-Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
-
-You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
-
-> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
-
-### Running with Activity Run
-
-Click the `Run activity` button in the top right corner in the UI.
-Select the entry point from the provided list: use `entrypoint.sh` on macOS/Linux and `entrypoint.cmd` on Windows.
-
-### Running in Notebook mode
-
-Navigate to the `tasks` directory and double-click the `robot.robot` file to open it in Notebook mode.
-
-Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click `Restart` to run the robot.
-
-> You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
-
-> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.
+Edit the `RPA_WORKITEMS_PATH` variable to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths, for example, `/Users/<username>/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
 
 ## Expected results of the robot
 
