@@ -14,7 +14,7 @@ This robot will:
 
 When executing our robot in a cloud environment like [Robocorp Cloud](https://cloud.robocorp.com), the `RPA.Robocloud.Items` library will store the work item in the cloud environment, sharing its contents between robots defined in the same process, without any configuration needed.
 
-When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://hub.robocorp.com/resources/libraries/rpaframework-Robocloud-Items/).
+When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://robocorp.com/docs/libraries/rpa-framework/rpa-robocloud-items).
 
 **If you have executed the first robot (`excel-to-work-item`), you will already have a `items.json` file on your filesystem that you can reuse here. If you have not, you can find a copy in the `/devdata` folder.**
 

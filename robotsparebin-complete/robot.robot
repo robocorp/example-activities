@@ -1,6 +1,6 @@
 # ## Beginners' course - complete example
 #
-# This example is the end result of our <a href="https://hub.robocorp.com/knowledge-base/courses/beginners-course/welcome/">beginners' course</a>.
+# This example is the end result of our <a href="https://robocorp.com/docs/courses/beginners-course">beginners' course</a>.
 #
 # Take the course to learn all about this! :)
 #
