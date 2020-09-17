@@ -18,3 +18,4 @@ PATH:
   - .
 PYTHONPATH:
   - .
+  - libraries
