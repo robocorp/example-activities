@@ -5,6 +5,8 @@ temp/
 .idea/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
+.virtual_documents/
+*/.virtual_documents/*
 .vscode
 .DS_Store
 *.pyc
@@ -12,3 +14,5 @@ temp/
 *.pdf
 *.template
 *.xlsx
+.virtual_documents/
+*/.virtual_documents/*

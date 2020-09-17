@@ -10,3 +10,5 @@ temp/
 *.pyc
 *.zip
 *.xlsx
+.virtual_documents/
+*/.virtual_documents/*

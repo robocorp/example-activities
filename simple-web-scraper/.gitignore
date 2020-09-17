@@ -9,3 +9,5 @@ temp/
 .DS_Store
 *.pyc
 *.zip
+.virtual_documents/
+*/.virtual_documents/*
