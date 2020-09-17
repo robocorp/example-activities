@@ -2,11 +2,6 @@ activities:
   Web scraper:
     output: output
     activityRoot: .
-    environment:
-      pythonPath:
-        - variables
-        - libraries
-        - resources
     action:
       command:
         - python
@@ -18,5 +13,5 @@ activities:
         - output
         - --logtitle
         - Task log
-        - ./tasks/*.robot
-condaConfig: config/conda.yaml
+        - robot.robot
+condaConfig: conda.yaml
