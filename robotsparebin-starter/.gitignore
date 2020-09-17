@@ -12,3 +12,5 @@ temp/
 *.pdf
 *.template
 *.xlsx
+.virtual_documents/
+*/.virtual_documents/*

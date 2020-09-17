@@ -1,3 +1,5 @@
 **/.DS_STORE
 *.zip
 .vscode
+.virtual_documents/
+*/.virtual_documents/*
