@@ -1,6 +1,16 @@
+# ## PDF Invite printer
+# ### Part2: Work Item To PDF
+#
+# This example is explained in detail <a href="https://robocorp.com/docs/development-howtos/pdf/pdf-invites-printer">here</a>.
+#
+# > !! **To run this code locally, you need to complete additional setup steps. Check the README.md file or the <a href="https://robocorp.com/docs/development-howtos/pdf/pdf-invites-printer">example page</a> for details!**
+#
+
 *** Settings ***
-Library           ArchiveLibrary
+Documentation     Invite printer robot. Creates PDF invitations to events based on data it receives
+...               from the work item.
 Library           OperatingSystem
+Library           RPA.Archive
 Library           RPA.PDF
 Library           RPA.Robocloud.Items
 Variables         variables.py
@@ -33,8 +43,12 @@ Create PDF file for invitation
 *** Keywords ***
 Create ZIP package from PDF files
     ${zip_file_name}=    Set Variable    ${OUTPUT_DIRECTORY}/PDFs.zip
-    Create Zip From Files In Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}    ${zip_file_name}
+    Archive Folder With Zip    ${PDF_TEMP_OUTPUT_DIRECTORY}    ${zip_file_name}
 
 *** Keywords ***
 Cleanup temporary PDF directory
     Remove Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}    True
+
+*** Tasks ***
+Create PDF invitations
+    Process invitations

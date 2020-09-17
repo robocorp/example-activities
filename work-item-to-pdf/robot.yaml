@@ -1,0 +1,21 @@
+tasks:
+  work-item-to-pdf:
+    command:
+      - python
+      - -m
+      - robot
+      - -d
+      - output
+      - --logtitle
+      - Task log
+      - robot.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+ignoreFiles:
+  - .gitignore
+PATH:
+  - .
+PYTHONPATH:
+  - .
+  - variables
