@@ -1,27 +1,35 @@
+# ## Web store order robot example
+# This example is explained in detail <a href="https://hub.robocorp.com/knowledge-base/tutorials/web-store-order-robot-tutorial/">here</a>.
+#
+# > !! **To run this code locally, you need to complete additional setup steps. Check the README.md file or the    <a href="https://hub.robocorp.com/knowledge-base/tutorials/web-store-order-robot-tutorial/">tutorial page</a> for details!**
+#
+
 *** Settings ***
+Documentation     Swag order robot. Places orders at https://www.saucedemo.com/
+...               by processing a spreadsheet of orders and ordering the
+...               specified products using browser automation. Uses local or
+...               cloud vault for credentials.
 Library           OperatingSystem
 Library           Orders
 Library           RPA.Browser
-Variables         variables.py
+Library           RPA.HTTP
+Library           RPA.Robocloud.Secrets
+
+*** Variables ***
+${EXCEL_FILE_NAME}=    Data.xlsx
+${EXCEL_FILE_URL}=    https://github.com/robocorp/example-activities/raw/master/web-store-order-processor/devdata/${EXCEL_FILE_NAME}
+${SWAG_LABS_URL}=    https://www.saucedemo.com
 
 *** Keywords ***
 Process orders
-    Validate prerequisites
     Open Swag Labs
-    Wait Until Keyword Succeeds    3x    1s    Login    ${SWAG_LABS_USER_NAME}    ${SWAG_LABS_PASSWORD}
+    ${secret}=    Get Secret    swaglabs
+    Wait Until Keyword Succeeds    3x    1s    Login    ${secret}[username]    ${secret}[password]
     ${orders}=    Collect orders
     FOR    ${order}    IN    @{orders}
         Run Keyword And Continue On Failure    Process order    ${order}
     END
     [Teardown]    Close Browser
-
-*** Keywords ***
-Validate prerequisites
-    File Should Exist    ${EXCEL_FILE_PATH}
-    Variable Should Exist    ${SWAG_LABS_USER_NAME}
-    Should Not Be Empty    ${SWAG_LABS_USER_NAME}
-    Variable Should Exist    ${SWAG_LABS_PASSWORD}
-    Should Not Be Empty    ${SWAG_LABS_PASSWORD}
 
 *** Keywords ***
 Open Swag Labs
@@ -42,7 +50,8 @@ Assert logged in
 
 *** Keywords ***
 Collect orders
-    ${orders}=    Get orders    ${EXCEL_FILE_PATH}
+    Download    ${EXCEL_FILE_URL}    overwrite=True
+    ${orders}=    Get orders    ${EXCEL_FILE_NAME}
     [Return]    ${orders}
 
 *** Keywords ***
@@ -129,3 +138,7 @@ Assert checkout confirmation page
 Assert checkout complete page
     Wait Until Page Contains Element    checkout_complete_container
     Location Should Be    ${SWAG_LABS_URL}/checkout-complete.html
+
+*** Tasks ***
+Place orders
+    Process orders
