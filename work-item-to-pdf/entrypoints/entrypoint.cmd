@@ -1,7 +1,7 @@
 @echo off
 
 REM Writes log and report files to "output" directory.
-python -m robot --report NONE --outputdir output --logtitle "Task log" robot.robot || goto :error
+python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot || goto :error
 
 echo Success
 goto :EOF

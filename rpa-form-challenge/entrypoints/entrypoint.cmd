@@ -1,6 +1,6 @@
 @echo off
 
-python -m robot --report NONE --outputdir output --logtitle "Task log" robot.robot || goto :error
+python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot || goto :error
 
 echo Success
 goto :EOF

@@ -8,7 +8,7 @@ tasks:
       - output
       - --logtitle
       - Task log
-      - robot.robot
+      - tasks.robot
 
 condaConfigFile: conda.yaml
 artifactsDir: output

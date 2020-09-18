@@ -1,3 +1,3 @@
 #!/bin/bash -ex
 
-python -m robot -d output --logtitle "Task log" robot.robot
+python -m robot -d output --logtitle "Task log" tasks.robot
