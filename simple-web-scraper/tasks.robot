@@ -15,6 +15,6 @@ ${URL}            https://robotframework.org/
 Store Web Page Content
     Open Available Browser    ${URL}
     ${text}=    Get Text    scroller
-    Create File    ${OUTPUT DIR}${/}text.txt    ${text}
+    Create File    ${CURDIR}${/}output${/}text.txt    ${text}
     Capture Element Screenshot    css:.img-fluid
     [Teardown]    Close Browser
