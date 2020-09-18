@@ -16,7 +16,7 @@ activities:
         - output
         - --logtitle
         - Task log
-        - robot.robot
+        - tasks.robot
 
 condaConfig: conda.yaml
 ignoreFiles:
