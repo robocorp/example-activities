@@ -89,10 +89,16 @@ This is my task
 #
 # First, **save your changes to the file**: select`File`->`Save All` from the menu toolbar, or press **control+s** (**command+s** on macOS).
 #
-# Make sure you have an account in Robocorp Cloud and you have linked Robocorp Lab to it using the button on the Welcome Screen. 
-#
-# An example workspace, process and robot have been created automatically with your account.
+# To have everything prepared in Robocorp Cloud make sure you can access it with browser. Run the following cell (`▸` or shift-enter)
+# and press the `Visit Robocorp Cloud` button below it.
+
+*** Keyword ***
+Visit Robocorp Cloud
+    Open User Browser    https://cloud.robocorp.com
+
+# An example workspace, process and robot have been created automatically with your Robocorp Cloud account.
 #
 # Push the `Publish to Robocorp Cloud` button in the tool bar, select your example workspace, the `Google Image Search` robot inside it and hit `Publish`.
+# Note: *If the upload button is disabled, close this window and first `Link to Robocloud`in the welcome screen. Then reopen this tutorial.*
 #
 # You have now overwritten the example robot in the cloud with your updated version, go there and run it!
