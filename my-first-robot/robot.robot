@@ -68,7 +68,8 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
-    Screenshot    alias:Google.FirstImage  filename=${CURDIR}${/}output${/}image_from_google.png  # Here we use a UI Locator to find the first image.
+    # Here we use a UI Locator to find the first image, and save it to a file in the output folder.
+    Screenshot    alias:Google.FirstImage  filename=${CURDIR}${/}output${/}image_from_google.png  
 
 # ### Step 5. Running the whole notebook
 #
@@ -89,7 +90,7 @@ This is my task
 #
 # First, **save your changes to the file**: select`File`->`Save All` from the menu toolbar, or press **control+s** (**command+s** on macOS).
 #
-# To have everything prepared in Robocorp Cloud make sure you can access it with browser. Run the following cell (`▸` or shift-enter)
+# To have everything prepared in Robocorp Cloud, make sure you can access it via your browser. Run the following cell (`▸` or shift-enter)
 # and press the `Visit Robocorp Cloud` button below it.
 
 *** Keyword ***
@@ -99,6 +100,7 @@ Visit Robocorp Cloud
 # An example workspace, process and robot have been created automatically with your Robocorp Cloud account.
 #
 # Push the `Publish to Robocorp Cloud` button in the tool bar, select your example workspace, the `Google Image Search` robot inside it and hit `Publish`.
-# Note: *If the upload button is disabled, close this window and first `Link to Robocloud`in the welcome screen. Then reopen this tutorial.*
+#
+# > Note: *If the upload button is disabled, close this window and first [Link your Robocorp Lab installation to Robocorp Cloud](https://robocorp.com/docs/product-manuals/robocorp-lab/linking-robocorp-lab-to-robocorp-cloud) in the welcome screen. Then reopen this tutorial.*
 #
 # You have now overwritten the example robot in the cloud with your updated version, go there and run it!
