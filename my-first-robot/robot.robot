@@ -68,7 +68,7 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
-    Capture Element Screenshot    alias:Google.FirstImage  # Here we use a UI Locator to find the first image.
+    Screenshot    alias:Google.FirstImage  filename=${CURDIR}${/}output${/}image_from_google.png  # Here we use a UI Locator to find the first image.
 
 # ### Step 5. Running the whole notebook
 #
