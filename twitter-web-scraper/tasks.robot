@@ -59,7 +59,7 @@ Get cookie acceptance link locator
 *** Keywords ***
 Get tweet directory
     [Arguments]    ${user_name}
-    [Return]    ${OUTPUT DIR}${/}/tweets/${user_name}
+    [Return]    ${CURDIR}${/}output${/}tweets/${user_name}
 
 *** Tasks ***
 Store the latest tweets by given user name
