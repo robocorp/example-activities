@@ -12,11 +12,13 @@ activities:
         - python
         - -m
         - robot
+        - --report
+        - NONE
         - -d
         - output
         - --logtitle
         - Task log
-        - robot.robot
+        - tasks.robot
 
 condaConfig: conda.yaml
 ignoreFiles:
