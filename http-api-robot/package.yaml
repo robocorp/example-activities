@@ -1,5 +1,5 @@
 activities:
-  RobotSpareBin Starter:
+  Http API robot:
     output: output
     activityRoot: .
     action:

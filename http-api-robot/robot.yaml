@@ -1,5 +1,5 @@
 tasks:
-  RobotSpareBin Starter:
+  Http API robot:
     command:
       - python
       - -m
