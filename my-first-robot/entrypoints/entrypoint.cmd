@@ -1,6 +1,6 @@
 @echo off
 
-python -m robot -d output --logtitle "Task log" robot.robot || goto :error
+python -m robot -d output --logtitle "Task log" tasks.robot || goto :error
 
 echo Success
 goto :EOF
