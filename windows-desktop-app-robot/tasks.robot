@@ -13,11 +13,12 @@ Library           RPA.Desktop.Windows
 
 *** Variables ***
 ${EXECUTABLE_NAME}=    Spotify
+${WINDOW_TITLE}=    Spotify Premium
 ${SONG_NAME}=     Monody
 
 *** Keywords ***
 Open the Spotify desktop application
-    Open From Search    ${EXECUTABLE_NAME}    ${EXECUTABLE_NAME}
+    Open From Search    ${EXECUTABLE_NAME}    ${WINDOW_TITLE}
 
 *** Keywords ***
 Search for the song
