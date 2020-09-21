@@ -12,6 +12,8 @@ activities:
         - python
         - -m
         - robot
+        - --report
+        - NONE
         - -d
         - output
         - --logtitle
