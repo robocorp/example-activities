@@ -16,16 +16,6 @@ Library           RPA.Robocloud.Items
 Variables         variables.py
 
 *** Keywords ***
-Process invitations
-    Set up and validate
-    ${invitations}=    Collect invitations from work item
-    FOR    ${invitation}    IN    @{invitations}
-        Run Keyword And Continue On Failure    Create PDF file for invitation    ${invitation}
-    END
-    Create ZIP package from PDF files
-    [Teardown]    Cleanup temporary PDF directory
-
-*** Keywords ***
 Set up and validate
     File Should Exist    ${PDF_TEMPLATE_PATH}
     Create Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}
@@ -51,4 +41,10 @@ Cleanup temporary PDF directory
 
 *** Tasks ***
 Create PDF invitations
-    Process invitations
+    Set up and validate
+    ${invitations}=    Collect invitations from work item
+    FOR    ${invitation}    IN    @{invitations}
+        Run Keyword And Continue On Failure    Create PDF file for invitation    ${invitation}
+    END
+    Create ZIP package from PDF files
+    [Teardown]    Cleanup temporary PDF directory
