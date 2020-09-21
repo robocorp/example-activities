@@ -18,13 +18,6 @@ ${EXCEL_FILE_NAME}=    Data.xlsx
 ${EXCEL_FILE_URL}=    https://github.com/robocorp/example-activities/raw/master/excel-to-work-item/devdata/${EXCEL_FILE_NAME}
 
 *** Keywords ***
-Store invitations in work item
-    Download    ${EXCEL_FILE_URL}    overwrite=True
-    ${invitations}=    Collect invitations from the Excel file
-    Set Work Item Variables    invitations=${invitations}
-    Save Work Item
-
-*** Keywords ***
 Collect invitations from the Excel file
     Open Workbook    ${EXCEL_FILE_NAME}
     ${invitations}=    Read Worksheet    header=True
@@ -33,4 +26,7 @@ Collect invitations from the Excel file
 
 *** Tasks ***
 Read invitations from Excel file and add them to the work item
-    Store invitations in work item
+    Download    ${EXCEL_FILE_URL}    overwrite=True
+    ${invitations}=    Collect invitations from the Excel file
+    Set Work Item Variables    invitations=${invitations}
+    Save Work Item
