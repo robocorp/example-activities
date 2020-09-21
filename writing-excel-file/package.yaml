@@ -1,12 +1,7 @@
 activities:
-  Image search:
+  Using vault:
     output: output
     activityRoot: .
-    environment:
-      path:
-        - .
-      pythonPath:
-        - .
     action:
       command:
         - python
@@ -14,12 +9,9 @@ activities:
         - robot
         - --report
         - NONE
-        - -d
+        - --outputdir
         - output
         - --logtitle
         - Task log
         - tasks.robot
-
 condaConfig: conda.yaml
-ignoreFiles:
-  - .gitignore
