@@ -7,6 +7,7 @@ Library           RPA.Cloud.AWS
 ...               region=us-east-1
 ...               robocloud_vault_name=aws
 Library           RPA.Cloud.Azure
+...               region=eastus
 ...               robocloud_vault_name=azure
 Library           RPA.Cloud.Google
 ...               robocloud_vault_name=gcp
