@@ -43,7 +43,7 @@ Store tweets
         ${text_file}=    Set Variable    ${tweet_directory}/tweet-${index}.txt
         ${text}=    Set Variable    ${tweet.find_element_by_xpath(".//div[@lang='en']").text}
         Capture Element Screenshot    ${tweet}    ${screenshot_file}
-        Create File    ${text_file}    ${text}
+        Create File    ${text_file}    ${text}    overwrite=True
         ${index}=    Evaluate    ${index} + 1
     END
 
