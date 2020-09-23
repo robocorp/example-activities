@@ -44,12 +44,11 @@ Log info
     ${pretty_json}=    To Json    ${response.text}    pretty_print=True
     ${launch}=    Set Variable    ${response.json()}
     Notebook Print    ${pretty_json}
-    Log               ${pretty_json}
+    Log    ${pretty_json}
     Notebook Print    ${launch["mission_name"]}
-    Log               ${launch["mission_name"]}
+    Log    ${launch["mission_name"]}
     Notebook Print    ${launch["rocket"]["rocket_name"]}
-    Log               ${launch["rocket"]["rocket_name"]}
-    
+    Log    ${launch["rocket"]["rocket_name"]}
 
 *** Tasks ***
 Log latest launch info
