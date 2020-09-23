@@ -3,6 +3,7 @@
 Documentation     A movie review sentiment analyzer robot. Tries to classify
 ...               written free-text reviews either as positive or negative.
 ...               How hard can it be? What could possibly go wrong? 😅
+Library           RPA.core.notebook
 Library           RPA.Browser
 Library           RPA.Cloud.AWS    robocloud_vault_name=aws
 
@@ -85,6 +86,7 @@ Open movie modal
 Comprehend sentiment
     [Arguments]    ${text}
     ${sentiment}=    Detect Sentiment    ${text}
+    Notebook Json    ${sentiment}
     ${sentiment_score}=    Set Variable If    "${sentiment["Sentiment"]}" == "NEGATIVE"    -1    1
     [Return]    ${sentiment_score}
 
@@ -93,6 +95,7 @@ Classify reviews
     [Arguments]    @{reviews}
     FOR    ${review}    IN    @{reviews}
         ${review_text}=    Get Text    ${review.find_element_by_class_name("card-content")}
+        Notebook Print    REVIEW: ${review_text}
         ${sentiment}=    Run Keyword If    ${USE_COMPREHEND}    Comprehend sentiment    ${review_text}
         ...    ELSE    Get sentiment    ${review_text}
         Switch to movie reviews website
@@ -117,6 +120,7 @@ Get sentiment
     Wait Until Element Is Visible    css:#accordionPaneSentimentAnalysis_content_lblInterpretation span:nth-of-type(2)
     ${sentiment_score_text}=    Get Text    css:#accordionPaneSentimentAnalysis_content_lblInterpretation span:nth-of-type(2)
     ${sentiment_score}=    Convert To Number    ${sentiment_score_text}
+    Notebook Print    SENTIMENT: ${sentiment_score}
     [Return]    ${sentiment_score}
 
 *** Keywords ***
