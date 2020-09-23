@@ -12,7 +12,7 @@ ${MOVIE_BROWSER_INDEX}=    2
 ${MOVIE_REVIEWS_WEBSITE_URL}=    http://www.rpachallenge.com
 ${SENTIMENT_ANALYSIS_WEBSITE_URL}=    https://www.danielsoper.com/sentimentanalysis/default.aspx
 ${SENTIMENT_BROWSER_INDEX}=    1
-${USE_COMPREHEND}=    True
+${USE_COMPREHEND}=    False
 
 *** Keywords ***
 Open movie reviews website
