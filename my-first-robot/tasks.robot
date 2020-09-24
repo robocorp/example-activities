@@ -69,7 +69,7 @@ Find Image
     Input Text    name:q    cute puppy
     Submit Form
     # Here we use a UI Locator to find the first image, and save it to a file in the output folder.
-    Screenshot    alias:Google.FirstImage  filename=${CURDIR}${/}output${/}image_from_google.png  
+    Screenshot    alias:Google.FirstImage  filename=%{ROBOT_ROOT}${/}output${/}image_from_google.png
 
 # ### Step 5. Running the whole notebook
 #
