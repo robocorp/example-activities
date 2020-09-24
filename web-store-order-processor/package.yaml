@@ -6,9 +6,7 @@ activities:
       path:
         - bin
       pythonPath:
-        - variables
         - libraries
-        - resources
     action:
       command:
         - python
@@ -20,5 +18,5 @@ activities:
         - output
         - --logtitle
         - Task log
-        - ./tasks/*.robot
-condaConfig: config/conda.yaml
+        - tasks.robot
+condaConfig: conda.yaml

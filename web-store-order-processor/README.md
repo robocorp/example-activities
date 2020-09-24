@@ -4,24 +4,9 @@ Swag order robot. Places orders at https://www.saucedemo.com/ by processing a
 spreadsheet of orders and ordering the specified products using browser
 automation. Uses local or cloud vault for credentials.
 
-## Setup
-
-Install Python package dependencies:
-
-```bash
-pip install --upgrade rpaframework
-```
-
 ## Configure local vault
 
-The robot needs credentials for logging in to the web store. These credentials
-are provided from a _vault_. Vault can be configured both for local runs or in
-the cloud.
-
-### Create a local vault
-
-Create a `vault.json` on your file system. Place the file outside your
-repository. Do not commit your vault file.
+See https://robocorp.com/docs/development-howtos/variables-and-secrets/vault
 
 Paste this content in the vault file:
 
@@ -36,58 +21,11 @@ Paste this content in the vault file:
 
 In `devdata/env.json`, edit the `RPA_SECRET_FILE` variable to point to the
 `vault.json` file on your filesystem. On macOS / Linux, use normal file paths,
-for example, `"/Users/<username>/vault.json"`. On Windows 10, you need to escape the path, for
-example, `"C:\\Users\\User\\vault.json"`.
+for example, `"/Users/<username>/vault.json"` or `"/home/<username>/vault.json"`.
+On Windows 10, you need to escape the path, for example, `"C:\\Users\\User\\vault.json"`.
 
 ### Robocorp Cloud
 
 Configure your vault using the UI. The name of the vault should be `swaglabs`.
 Provide the user name and the password as key-value pairs (see the vault file
 for the exact naming).
-
-## Executing with Robocorp CLI
-
-> Assumes `robocode` is installed. Install with `pip install --upgrade robocode`.
-
-Create an executable package:
-
-```bash
-robo wrap
-```
-
-Execute the robot using the local environment variables file:
-
-Windows:
-
-```bash
-robo run entrypoint.cmd -v devdata\env.json
-```
-
-macOS / Linux:
-
-```bash
-robo run entrypoint.sh -v devdata/env.json
-```
-
-## Executing with Robocorp Lab
-
-Robocorp Lab will take care of setting up the environment for you, so you do not need to run additional installation commands.
-
-You can choose to run the robot in Robocorp Lab in two different modes, using the _Activity run_ functionality or in _Notebook mode_.
-
-> Visit Robocorp documentation to learn more about [running your robots in Robocorp Lab](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/).
-
-### Running with Activity Run
-
-Click the `Run activity` button in the top right corner in the UI.
-Select the entry point from the provided list: use `entrypoint.sh` on macOS/Linux and `entrypoint.cmd` on Windows.
-
-### Running in Notebook mode
-
-Navigate to the `tasks` directory and double-click the `robot.robot` file to open it in Notebook mode.
-
-Click the `>>` icon or press `Ctrl+Shift+Enter` (Windows) or `Shift-Command-Enter` (macOS) and click `Restart` to run the robot.
-
-> You can also find the run command from the menu on the top of Robocorp Lab screen, by selecting `Run` -> `Restart Kernel and Run All Cells...`.
-
-> In Notebook mode, you can also run only part of the robot step by step. Check [this article in Robocorp documentation](https://hub.robocorp.com/knowledge-base/articles/running-robots-in-robocode-lab/) for more information.

@@ -1,0 +1,17 @@
+activities:
+  Http API robot:
+    output: output
+    activityRoot: .
+    action:
+      command:
+        - python
+        - -m
+        - robot
+        - --report
+        - NONE
+        - --outputdir
+        - output
+        - --logtitle
+        - Task log
+        - tasks.robot
+condaConfig: conda.yaml

@@ -5,9 +5,12 @@ temp/
 .idea/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
+.virtual_documents/
 .vscode
 .DS_Store
 *.pyc
 *.zip
 .virtual_documents/
 */.virtual_documents/*
+testrun/*
+Data.xlsx

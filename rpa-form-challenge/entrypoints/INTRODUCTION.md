@@ -7,5 +7,5 @@ Define each entrypoint here as a script
   > It is better to create scripts to contain the different argument variations
   > so that selecting an entrypoint in Robocorp Cloud remains clear
 
-This directory will be in PATH when the package is executed in Robocorp App
+This directory will be in PATH when the bundle is executed in Robocorp App
 or through Robocorp CLI.

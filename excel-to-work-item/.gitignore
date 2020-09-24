@@ -11,3 +11,5 @@ temp/
 *.zip
 .virtual_documents/
 */.virtual_documents/*
+testrun/*
+Data.xlsx

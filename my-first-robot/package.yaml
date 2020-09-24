@@ -22,4 +22,4 @@ activities:
 
 condaConfig: conda.yaml
 ignoreFiles:
-    - .gitignore
+  - .gitignore
