@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# <img src="images/robocode_lab.png" width="200" style="margin-top:20px">
+# <img src="images/logo.svg" width="200" style="margin-top:20px">
 #
 # # My First Robot - Tutorial
 #
