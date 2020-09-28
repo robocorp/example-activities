@@ -49,14 +49,12 @@ Fill The Form Using The Data From The Excel File
 
 *** Keywords ***
 Collect The Results
-    Capture Element Screenshot    css:div.sales-summary
+    Screenshot    css:div.sales-summary    ${CURDIR}${/}output${/}sales_summary.png
 
 *** Keywords ***
 Export The Table As A PDF
     Wait Until Element Is Visible    id:sales-results
     ${sales_results_html}=    Get Element Attribute    id:sales-results    outerHTML
-    ${directory_exists}=    Does Directory Exist    ${CURDIR}${/}output
-    Run Keyword If    ${directory_exists}==False    Create directory    ${CURDIR}${/}output
     Html To Pdf    ${sales_results_html}    ${CURDIR}${/}output${/}sales_results.pdf
 
 *** Keywords ***
