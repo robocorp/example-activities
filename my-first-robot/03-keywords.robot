@@ -16,11 +16,11 @@ Find an Image from Google Images
 #
 # ## Part 3. Keywords
 #
-# So, now we've seen _two_ of the _four_ available cell types, `***Settings***` and `***Tasks***`.
+# So, now we've seen _two_ of the _four_ available cell types, `*** Settings ***` and `*** Tasks ***`.
 # 
-# We've given our robot the utilities it needs to run in `***Settings***`, we've told it what we want it to do in the `***Tasks***` cell, but we haven't described what steps it needs to take to complete that *Task*! 
+# We've given our robot the utilities it needs to run in `*** Settings ***`, we've told it what we want it to do in the `*** Tasks ***` cell, but we haven't described what steps it needs to take to complete that *Task*! 
 #
-# The `***Keyword***` cell is where we break our *Task*'s steps down into actual instructions. Let's setup our `***Keyword***` cell with the *Task* step's name we defined in our `***Tasks***` cell.
+# The `*** Keyword ***` cell is where we break our *Task*'s steps down into actual instructions. Let's setup our `*** Keyword ***` cell with the *Task* step's name we defined in our `*** Tasks ***` cell.
 
 *** Keyword ***
 Find Image
