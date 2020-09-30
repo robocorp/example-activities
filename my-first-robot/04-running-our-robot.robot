@@ -17,6 +17,7 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
+    Wait Until Element Is Visible  alias:Google.FirstImage
     Screenshot    alias:Google.FirstImage
 
 # ****
