@@ -10,7 +10,7 @@ tasks:
       - output
       - --logtitle
       - Task log
-      - tasks.robot
+      - 05-moving-our-robot-to-the-cloud.robot
 
 condaConfigFile: conda.yaml
 artifactsDir: output
