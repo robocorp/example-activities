@@ -8,7 +8,7 @@
 
 *** I am a cell! ***
 
-# Not very interesting, is it? And it seems to be giving us an error. That's because there are only *four* recognised cell types in Robocorp Lab robots, and _'I am a cell!'_ isn't one of them!
+# Not very interesting, is it? And it seems to be giving us an *error*. That's because there are only *four* recognised cell types in Robocorp Lab robots, and _'I am a cell!'_ isn't one of them!
 #
 # Let's start with the first real cell type: `***Settings***`. Here's what one looks like:
 
