@@ -34,7 +34,7 @@ Find Image
 # 4. Wait for Google to find the images
 # 5. Choose an image they liked!
 #
-# We can describe this step-by-step process a human would take to our robot using special commands that we made available when we added the *RPA.Browser* utility. Here's how it looks...
+# We can describe this step-by-step process a human would take to our robot using special commands that we made available when we added the *RPA.Browser* utility in our Robot's `***Settings***`. Here's how it looks...
 
 *** Keyword ***
 Find Image
@@ -46,4 +46,4 @@ Find Image
 
 # Let's move to the next step to see our finished robot and actually run it!
 # 
-# <img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)
+# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)

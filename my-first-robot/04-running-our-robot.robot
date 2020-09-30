@@ -34,9 +34,9 @@ Find Image
 # 
 # Now we have a fully working robot running on our computer at our command!
 #
-# However, our robot isn't doing much good only being run on our computer only when we tell it to. That's we move robots we create in the Robocorp Lab to the Robocorp Cloud.
-# In the Robocorp Cloud we can instruct our robots to run automatically wherever and whenever you want to, and not just on your own computer!
+# However, our robot isn't doing much good only being run on our computer only when we tell it to. That's why we move robots we create in the Robocorp Lab to the Robocorp Cloud, every robot we make should aim to live there.
+# This is because robots that live in the Robocorp Cloud become truly powerful: we can instruct our robots there, armies of them, to run automatically wherever and whenever you want to, and not just on your own computer!
 #
 # The last part of the tutorial will show you how to achieve this.
 #  
-# <img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [Part 5: Moving Our Robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot)
+# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 5: Moving Our Robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot)

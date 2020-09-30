@@ -10,7 +10,7 @@
 
 # Not very interesting, is it? And it seems to be giving us an error. That's because there are only *four* recognised cell types in Robocorp Lab robots, and _'I am a cell!'_ isn't one of them!
 #
-# Let's start with the first real cell type: `*** Settings ***`. Here's what one looks like:
+# Let's start with the first real cell type: `***Settings***`. Here's what one looks like:
 
 *** Settings ***
 Documentation     My first robot!
@@ -30,10 +30,10 @@ Task Teardown     Close All Browsers
 #
 # The last thing we need before moving on though is to give our cell life! A dead cell is useless to a robot. To _run_ our cell, we simply click on it and then click the `▸` button in the toolbar full of icons.
 #
-# Try it on the *Settings* cell now.
+# Try it on the `***Settings***` cell now.
 # 
 # See how the `[number]:` at the top-left of the cell changed? Now we know our cell is alive and ready to use!
 #
-# In the next part we'll define the tasks that we want our robot to perform using the *Tasks* cell type!
+# In the next part we'll define the tasks that we want our robot to perform using the `***Tasks***` cell type!
 #
-# <img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [Step 2: Tasks](./step-02-tasks.robot).
+# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 2: Tasks](./02-tasks.robot).

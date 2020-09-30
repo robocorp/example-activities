@@ -31,4 +31,4 @@ Find an Image from Google Images
 #
 # We'll have to define what exactly we want 'Find Image' to mean using our next cell type: `***Keyword***`
 #
-# <img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [Step 3: Keywords](./step-03-keywords.robot)
+# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 3: Keywords](./03-keywords.robot)
