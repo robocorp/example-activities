@@ -8,10 +8,6 @@ Documentation     My first robot!
 Library           RPA.Browser
 Task Teardown     Close All Browsers
 
-*** Tasks ***
-Find an Image from Google Images
-    Find Image
-
 *** Keyword ***
 Find Image
     Open Available Browser    https://images.google.com
@@ -20,6 +16,10 @@ Find Image
     Wait Until Element Is Visible  alias:Google.FirstImage
     # This newly added 'filename' value tells the robot where we want the chosen image to be saved
     Screenshot    alias:Google.FirstImage  filename=%{ROBOT_ROOT}${/}output${/}image_from_google.png
+
+*** Tasks ***
+Find an Image from Google Images
+    Find Image
 
 # ****
 #
