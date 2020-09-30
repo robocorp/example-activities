@@ -8,10 +8,6 @@ Documentation     My first robot!
 Library           RPA.Browser
 Task Teardown     Close All Browsers
 
-*** Tasks ***
-Find an Image from Google Images
-    Find Image
-
 *** Keyword ***
 Find Image
     Open Available Browser    https://images.google.com
@@ -20,6 +16,10 @@ Find Image
     Wait Until Element Is Visible  alias:Google.FirstImage
     Screenshot    alias:Google.FirstImage
 
+*** Tasks ***
+Find an Image from Google Images
+    Find Image
+
 # ****
 #
 # ## Part 4. Running Our Robot
@@ -27,10 +27,10 @@ Find Image
 # With all of these cells together in one file, we have created a complete software robot! Let's bring each of its cells to life and watch it run.
 # 
 # We can do this by either:
-# * Clicking each cell and then the `▸` one after the other
+# * Clicking each cell and then the `▸` (from the icon toolbar) one after the other
 # * Running all the robot's cells in one go by clicking `▸▸` (this is known as 'running the notebook')
 #
-# Try either of these methods now...
+# Try either of these methods now... You'll see a 'Find Image' button appear as the robot has gathered all the resources it needs to operate after running the cells. Click the button! 
 # 
 # Now we have a fully working robot running on our computer at our command!
 #
