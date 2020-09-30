@@ -19,7 +19,7 @@ Task Teardown     Close All Browsers
 
 # That's better. We're not getting any errors now because this is a cell type our robot understands.
 # 
-# The `***Settings*** cell is where we define *two* main concepts:
+# The `*** Settings *** cell is where we define *two* main concepts:
 #
 # 1. *CONFIGURATION* to manage and describe our robot:
 #    - `Documentation`: our robot's name
