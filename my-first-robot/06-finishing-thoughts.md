@@ -2,8 +2,8 @@
 
 With that, our tutorial is over! You've achieved many of the core steps necessary to building software robots, that is:
 1. You've created a fully functioning software robot that retrieves an image for you and displays it.
-2. You've been introduced to the concepts of [*Cells*](./01-cells.robot), [`***Settings***`](./01-cells.robot), [`***Tasks***`](./02-tasks.robot) and [`***Keywords***`](./03-keywords.robot)
-3. You've even [published your robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot) where it has even more powerful capabilities such as saving the image as a new file
+2. You've been introduced to the concepts of [**Cells**](./01-cells.robot), [`*** Settings ***`](./01-cells.robot), [`*** Tasks ***`](./02-tasks.robot) and [`*** Keywords ***`](./03-keywords.robot)
+3. You've even [published your robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot) where it has even more powerful capabilities, such as saving robot's chosen image as a new file
 
 Despite all that you've learned you may still have questions, such as:
 - What's the fourth cell type for building robots?
