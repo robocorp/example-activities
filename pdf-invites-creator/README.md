@@ -4,7 +4,7 @@ Starting from an Excel file, this robot will generate a personalized PDF invitat
 
 > You can find the full tutorial and instructions on our [documentation site](https://robocorp.com/docs/development-howtos/pdf/pdf-invites-printer).
 
-This robot demonstrates advanced features of the Robocorp set of tools:
+This robot demonstrates the advanced features of the Robocorp set of tools:
 
 - Support for multiple tasks inside the same robot
 - Using the `Robocloud.Items` library to pass data between two different tasks in Robocorp Cloud.
@@ -17,9 +17,9 @@ When executing our robot in a cloud environment like [Robocorp Cloud](https://cl
 
 When developing our robot and running it locally, however, we want the library to store the data in a JSON file, and provide the required parameters to simulate the cloud environment. You can learn more about the internals of the `RPA.Robocloud.Items` library [here](https://robocorp.com/docs/product-manuals/robocorp-cloud/using-robocloud-items-library).
 
-Create a new file called `items.json` on your file system, for example at `/Users/<username>/items.json`.
+Create a new file called `items.json` on your file system, for example, at `/Users/<username>/items.json`.
 
-Paste this content into your `items.json` file, creating an empty but valid json file:
+Paste this content into your `items.json` file, creating an empty but valid JSON file:
 
 ```json
 {}
