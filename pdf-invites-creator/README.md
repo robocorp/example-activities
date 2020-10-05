@@ -1,4 +1,4 @@
-## PDF Invites creator: multi-task robot example
+## PDF invites creator: multi-task robot example
 
 Starting from an Excel file, this robot will generate a personalized PDF invitation for each participant to an event.
 
