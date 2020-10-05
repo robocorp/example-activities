@@ -1,5 +1,5 @@
-# ## PDF Invite printer
-# ### Part1: Excel To Work Item
+# ## PDF invite creator
+# ### Part 1: Excel To Work Item
 #
 # This example is explained in detail <a href="https://robocorp.com/docs/development-howtos/pdf/pdf-invites-printer">here</a>.
 #

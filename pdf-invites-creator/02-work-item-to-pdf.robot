@@ -1,5 +1,5 @@
-# ## PDF Invite printer
-# ### Part2: Work Item To PDF
+# ## PDF invite creator
+# ### Part 2: Work Item To PDF
 #
 # This example is explained in detail <a href="https://robocorp.com/docs/development-howtos/pdf/pdf-invites-printer">here</a>.
 #
