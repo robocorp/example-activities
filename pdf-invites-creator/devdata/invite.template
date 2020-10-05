@@ -1,0 +1,10 @@
+<h1>Event Invitation</h1>
+<p> Dear <b>{{first_name}} {{last_name}}</b>, </p>
+
+<p>You are invited to our event on <b>{{date}}</b> at <b>{{time}}</b>, at <b>{{address}}</b>, <b>{{city}}</b>.</p>
+
+<p>Bring a friend, and don't be late! </p>
+
+<p>Kind regards</p>,
+
+<p>Robot Events Inc</p>.
