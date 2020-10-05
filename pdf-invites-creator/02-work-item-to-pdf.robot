@@ -7,7 +7,7 @@
 #
 
 *** Settings ***
-Documentation     Invite printer robot. Creates PDF invitations to events based on data it receives
+Documentation     Invite creator robot. Creates PDF invitations to events based on data it receives
 ...               from the work item.
 Library           RPA.FileSystem
 Library           RPA.Archive
