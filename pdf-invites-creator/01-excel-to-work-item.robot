@@ -7,8 +7,8 @@
 #
 
 *** Settings ***
-Documentation     Excel reader robot. Reads information from a given Excel file and
-...               adds it to the work item.
+Documentation     Excel reader robot. Reads information from a given Excel file
+...               and adds it to the work item.
 Library           RPA.Excel.Files
 Library           RPA.Robocloud.Items
 
