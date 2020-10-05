@@ -25,7 +25,7 @@ Paste this content into your `items.json` file, creating an empty but valid json
 {}
 ```
 
-Edit the `RPA_WORKITEMS_PATH` variable to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths, for example, `/Users/<username>/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
+Edit the `RPA_WORKITEMS_PATH` variable in the `devdata/env.json` file to point to the `items.json` file on your filesystem. On macOS / Linux, use normal file paths, for example, `/Users/<username>/items.json`. On Windows 10, you need to escape the path, for example, `C:\\Users\\User\\items.json`.
 
 ## First task: Excel to Work Item
 
