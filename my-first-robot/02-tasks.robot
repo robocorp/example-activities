@@ -25,7 +25,9 @@ Find an Image from Google Images
 Find an Image from Google Images
     Find Image
 
-# Nice and straightforward! Let's try bringing our new cell with its new *Task* name and steps to life by clicking on it and then the `▸` button. Try that now.
+# Nice and straightforward! Let's try bringing this `*** Tasks ***` cell with its 'Find an Image from Google Images' *Task* name and 'Find Image' task 'step' to life.
+#
+# Click on the `*** Tasks ***` cell above and then the `▸` button. Try that now.
 #
 # Hm, that doesn't seem quite right... We got a `| FAIL |` with a `No keyword with name 'Find Image' found` error. Perhaps it's clear what we want our robot to do as its operator but our robot isn't intelligent enough to understand what we mean when we ask it to 'Find Image'?
 #
