@@ -12,7 +12,7 @@ def open_the_website(url: str):
 
 def search_for(term: str):
     input = "css:input"
-    browser.input_text(input, "python")
+    browser.input_text(input, term)
     browser.press_keys(input, "ENTER")
 
 
@@ -30,6 +30,6 @@ def main():
         browser.close_all_browsers()
 
 
-# Call the main()  function, checking that we are running as a stand-alone script:
+# Call the main() function, checking that we are running as a stand-alone script:
 if __name__ == "__main__":
     main()
