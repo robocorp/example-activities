@@ -10,3 +10,7 @@ The robot:
 - Submits the classification and captures the final results
 
 > NOTE: This example needs some manual configuration steps. You can find the full tutorial and instructions on our [documentation site](https://www.robocorp.com/docs/examples/movie-review-sentiment-analyzer-robot).
+
+Click the link below to get to the code:
+
+[tasks.robot](./tasks.robot)

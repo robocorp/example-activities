@@ -28,3 +28,9 @@ for example, `/Users/<username>/items.json`. On Windows 10, you need to escape t
 After you run the robot, you will find a zip archive `PDFs.zip` file in the `temp/robocode/work-item-to-pdf/output` directory, or the `output` directory if executing the example robot in Robocorp Lab in Notebook mode.
 
 Extract it and you will see the PDF invitations according to the data in the Excel file.
+
+## Get to the code
+
+Click the link below to get to the code:
+
+[tasks.robot](./tasks.robot)

@@ -29,3 +29,9 @@ On Windows 10, you need to escape the path, for example, `"C:\\Users\\User\\vaul
 Configure your vault using the UI. The name of the vault should be `swaglabs`.
 Provide the user name and the password as key-value pairs (see the vault file
 for the exact naming).
+
+## Access the code
+
+Click the link below to get to the code:
+
+[tasks.robot](./tasks.robot)
