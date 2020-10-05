@@ -32,7 +32,7 @@ Find Image
 # 2. Enter a search term in the searchbar
 # 3. Click 'Search'
 # 4. Wait for Google to find the images
-# 5. Choose an image they liked!
+# 5. Choose an image they like
 #
 # We can describe this step-by-step process a human would take to our robot using special commands that we made available when we added the *RPA.Browser* utility in our Robot's `***Settings***`. Here's how it looks...
 
@@ -44,6 +44,6 @@ Find Image
     Wait Until Element Is Visible  alias:Google.FirstImage
     Screenshot    alias:Google.FirstImage
 
-# Let's move to the next step to see our finished robot and actually run it!
+# Our robot is now almost ready. In the next step we will put all of our robot's cells together and actually run it!
 # 
 # <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)
