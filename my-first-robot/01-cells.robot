@@ -26,7 +26,7 @@ Task Teardown     Close All Browsers
 #    - `Task Teardown`: what to do when it finishes its tasks 
 #
 #
-# 2. **UTILITIES to give our robot special functionality:**
+# 2. **LIBRARIES to give our robot special functionality, in the form of keywords:**
 #    - `RPA.Browser`: so our robot can control our web browser
 #
 #
