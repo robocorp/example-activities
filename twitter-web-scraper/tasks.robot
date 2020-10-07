@@ -7,60 +7,59 @@ Library           RPA.Browser
 Library           RPA.FileSystem
 
 *** Variables ***
-${NUMBER_OF_TWEETS}=    3
-${TWITTER_URL}=    https://twitter.com
 ${USER_NAME}=     RobocorpInc
-
-*** Keywords ***
-Store the latest ${number_of_tweets} tweets by user name "${user_name}"
-    Open Twitter homepage    ${user_name}
-    Run Keyword And Ignore Error    Accept cookie notice
-    Store tweets    ${user_name}    ${number_of_tweets}
-    [Teardown]    Close Browser
+${NUMBER_OF_TWEETS}=    3
+${TWEET_DIRECTORY}=    ${CURDIR}${/}output${/}tweets/${USER_NAME}
+${TWEETS_LOCATOR}=    xpath://article[descendant::span[contains(text(), "\@${USER_NAME}")]]
 
 *** Keywords ***
 Open Twitter homepage
-    [Arguments]    ${user_name}
-    Open Available Browser    ${TWITTER_URL}/${user_name}
+    Open Available Browser    https://twitter.com/${USER_NAME}
 
 *** Keywords ***
-Accept cookie notice
-    ${cookie_acceptance_link}=    Get cookie acceptance link locator
-    Click Element When Visible    ${cookie_acceptance_link}
+Accept the cookie notice
+    Run Keyword And Ignore Error
+    ...    Click Element When Visible
+    ...    xpath://span[contains(text(), "Close")]
 
 *** Keywords ***
-Store tweets
-    [Arguments]    ${user_name}    ${number_of_tweets}
-    ${tweets_locator}=    Get tweets locator    ${user_name}
-    Wait Until Element Is Visible    ${tweets_locator}
-    @{tweets}=    Get WebElements    ${tweets_locator}
-    ${tweet_directory}=    Get tweet directory    ${user_name}
-    Create Directory    ${tweet_directory}    parents=True
+Hide distracting UI elements
+    # Use JavaScript to hide distracting elements (the header and the footer).
+    Execute Javascript    document.querySelector('div[data-testid="primaryColumn"] > div > div').style.display = 'none'
+    Execute Javascript    document.querySelector('#layers > div').style.display = 'none'
+
+*** Keywords ***
+Scroll down to load dynamic content
+    Execute Javascript    window.scrollBy(0, 2000)
+
+*** Keywords ***
+Get tweets
+    Wait Until Element Is Visible    ${TWEETS_LOCATOR}
+    Scroll Element Into View    ${TWEETS_LOCATOR}
+    Sleep    2s    # Give dynamic content some time to load.
+    @{tweets}=    Get WebElements    ${TWEETS_LOCATOR}
+    [Return]    @{tweets}
+
+*** Keywords ***
+Store the tweets
+    Create Directory    ${TWEET_DIRECTORY}    parents=True
     ${index}=    Set Variable    1
+    @{tweets}=    Get tweets
     FOR    ${tweet}    IN    @{tweets}
-        Exit For Loop If    ${index} > ${number_of_tweets}
-        ${screenshot_file}=    Set Variable    ${tweet_directory}/tweet-${index}.png
-        ${text_file}=    Set Variable    ${tweet_directory}/tweet-${index}.txt
+        Exit For Loop If    ${index} > ${NUMBER_OF_TWEETS}
+        ${screenshot_file}=    Set Variable    ${TWEET_DIRECTORY}/tweet-${index}.png
+        ${text_file}=    Set Variable    ${TWEET_DIRECTORY}/tweet-${index}.txt
         ${text}=    Set Variable    ${tweet.find_element_by_xpath(".//div[@lang='en']").text}
-        Capture Element Screenshot    ${tweet}    ${screenshot_file}
+        Screenshot    ${tweet}    ${screenshot_file}
         Create File    ${text_file}    ${text}    overwrite=True
         ${index}=    Evaluate    ${index} + 1
     END
 
-*** Keywords ***
-Get tweets locator
-    [Arguments]    ${user_name}
-    [Return]    xpath://article[descendant::span[contains(text(), "\@${user_name}")]]
-
-*** Keywords ***
-Get cookie acceptance link locator
-    [Return]    xpath://span[contains(text(), "Close")]
-
-*** Keywords ***
-Get tweet directory
-    [Arguments]    ${user_name}
-    [Return]    ${CURDIR}${/}output${/}tweets/${user_name}
-
 *** Tasks ***
 Store the latest tweets by given user name
-    Store the latest ${NUMBER_OF_TWEETS} tweets by user name "${USER_NAME}"
+    Open Twitter homepage
+    Accept the cookie notice
+    Hide distracting UI elements
+    Scroll down to load dynamic content
+    Store the tweets
+    [Teardown]    Close Browser
