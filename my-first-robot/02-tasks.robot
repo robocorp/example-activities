@@ -19,13 +19,13 @@ Task Teardown     Close All Browsers
 *** Tasks ***
 Find an Image from Google Images
 
-# But this is only the *Task*'s name! The robot doesn't know what to do from that sentence alone. We can define the steps needed to complete the *Task* underneath in the `*** Tasks ***` cell.
+# But this is only the *Task*'s name! The robot doesn't know what to do from that sentence alone. We can define the processes needed to complete the *Task* underneath in the `*** Tasks ***` cell.
 
 *** Tasks ***
 Find an Image from Google Images
     Find Image
 
-# Nice and straightforward! Let's try bringing this `*** Tasks ***` cell with its 'Find an Image from Google Images' *Task* name and 'Find Image' task 'step' to life.
+# Nice and straightforward! Let's try bringing this `*** Tasks ***` cell with its 'Find an Image from Google Images' *Task* name and the 'Find Image' task keyword to life.
 #
 # Click on the `*** Tasks ***` cell above and then the `▸` button. Try that now.
 #
