@@ -18,14 +18,21 @@ Find an Image from Google Images
 #
 # So, now we've seen _two_ of the _four_ available cell types, `*** Settings ***` and `*** Tasks ***`.
 # 
-# We've given our robot the utilities it needs to run in `*** Settings ***`, we've told it what we want it to do in the `*** Tasks ***` cell, but we haven't described what steps it needs to take to complete that *Task*! 
+# - In the `*** Settings ***` we gave our robot access to powerful web browser-related keywords by importing the `RPA.Browser` library
+# - In the `*** Tasks ***` cell we gave our robot a named task with the 'Find Image' keyword that will be activated when that task is run
 #
-# The `*** Keyword ***` cell is where we break our *Task*'s steps down into actual instructions. Let's setup our `*** Keyword ***` cell with the *Task* step's name we defined in our `*** Tasks ***` cell.
+# Now we need to describe what work is represented by the 'Find Image' keyword.
+#
+# But what is a *keyword*? Basically, keywords are comprised of bits of functionality that can be referenced and executed by name, like functions in other programming languages! Keywords can either come from imported libraries (like `RPA.Browser`) or defined by us in the `*** Keywords ***` cell.
+#
+# The `*** Keyword ***` cell is where we can create our own custom keywords. Let's setup our `*** Keyword ***` cell with the 'Find Image' keyword we defined in our `*** Tasks ***` cell, as part of the 'Find an Image from Google Images' *Task*.
 
 *** Keyword ***
 Find Image
 
-# Software robots are meant to replicate tasks that would otherwise be completed by a human: so, how would a human search for an image in Google?
+# Now we can define the actual process that will occur when the 'Find Image' keyword is executed... but what do we want to happen when our robot tries to 'Find Image'?
+#
+# Software robots are meant to replicate processes that would otherwise be completed by a human: so, how would a human search for an image in Google?
 #
 # Let's describe it as clearly and simply as possible:
 # 1. Open the browser
@@ -34,7 +41,7 @@ Find Image
 # 4. Wait for Google to find the images
 # 5. Choose an image they like
 #
-# We can describe this step-by-step process a human would take to our robot using special commands that we made available when we added the *RPA.Browser* utility in our Robot's `***Settings***`. Here's how it looks...
+# We can describe this step-by-step process a human would take to our robot using special keywords provided when we imported the `RPA.Browser` library. Here's how it looks...
 
 *** Keyword ***
 Find Image
