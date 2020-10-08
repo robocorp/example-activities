@@ -3,8 +3,10 @@
 
 *** Settings ***
 Documentation     Opens the Twitter web page and stores some content.
+Library           Collections
 Library           RPA.Browser
 Library           RPA.FileSystem
+Library           RPA.RobotLogListener
 
 *** Variables ***
 ${USER_NAME}=     RobocorpInc
@@ -14,7 +16,7 @@ ${TWEETS_LOCATOR}=    xpath://article[descendant::span[contains(text(), "\@${USE
 
 *** Keywords ***
 Open Twitter homepage
-    Open Available Browser    https://twitter.com/${USER_NAME}
+    Open Available Browser    https://mobile.twitter.com/${USER_NAME}
 
 *** Keywords ***
 Accept the cookie notice
@@ -23,36 +25,52 @@ Accept the cookie notice
     ...    xpath://span[contains(text(), "Close")]
 
 *** Keywords ***
+Hide element
+    [Arguments]    ${locator}
+    Execute Javascript
+    ...    document.querySelector('${locator}').style.display = 'none'
+
+*** Keywords ***
 Hide distracting UI elements
-    # Use JavaScript to hide distracting elements (the header and the footer).
-    Execute Javascript    document.querySelector('div[data-testid="primaryColumn"] > div > div').style.display = 'none'
-    Execute Javascript    document.querySelector('#layers > div').style.display = 'none'
+    @{locators}=    Create List
+    ...    header
+    ...    \#layers > div
+    ...    nav
+    ...    div[data-testid="primaryColumn"] > div > div
+    ...    div[data-testid="sidebarColumn"]
+    Mute Run On Failure    Hide element
+    FOR    ${locator}    IN    @{locators}
+        Run Keyword And Ignore Error    Hide element    ${locator}
+    END
 
 *** Keywords ***
 Scroll down to load dynamic content
-    Execute Javascript    window.scrollBy(0, 2000)
+    FOR    ${pixels}    IN RANGE    200    2000    200
+        Execute Javascript    window.scrollBy(0, ${pixels})
+        Sleep    500ms
+    END
+    Execute Javascript    window.scrollTo(0, 0)
+    Sleep    1s
 
 *** Keywords ***
 Get tweets
     Wait Until Element Is Visible    ${TWEETS_LOCATOR}
-    Scroll Element Into View    ${TWEETS_LOCATOR}
-    Sleep    2s    # Give dynamic content some time to load.
-    @{tweets}=    Get WebElements    ${TWEETS_LOCATOR}
+    @{all_tweets}=    Get WebElements    ${TWEETS_LOCATOR}
+    @{tweets}=    Get Slice From List    ${all_tweets}    0    ${NUMBER_OF_TWEETS}
     [Return]    @{tweets}
 
 *** Keywords ***
 Store the tweets
     Create Directory    ${TWEET_DIRECTORY}    parents=True
-    ${index}=    Set Variable    1
+    ${index} =    Set Variable    1
     @{tweets}=    Get tweets
     FOR    ${tweet}    IN    @{tweets}
-        Exit For Loop If    ${index} > ${NUMBER_OF_TWEETS}
         ${screenshot_file}=    Set Variable    ${TWEET_DIRECTORY}/tweet-${index}.png
         ${text_file}=    Set Variable    ${TWEET_DIRECTORY}/tweet-${index}.txt
         ${text}=    Set Variable    ${tweet.find_element_by_xpath(".//div[@lang='en']").text}
         Screenshot    ${tweet}    ${screenshot_file}
         Create File    ${text_file}    ${text}    overwrite=True
-        ${index}=    Evaluate    ${index} + 1
+        ${index} =    Evaluate    ${index} + 1
     END
 
 *** Tasks ***
