@@ -19,7 +19,7 @@ Task Teardown     Close All Browsers
 *** Tasks ***
 Find an Image from Google Images
 
-# But this is only the *Task*'s name! The robot doesn't know what to do from that sentence alone. We can define the processes needed to complete the *Task* underneath in the `*** Tasks ***` cell.
+# But this is only the *Task*'s name! The robot doesn't know what to do from that sentence alone. We can define the processes needed to complete the *Task* underneath the *Task* in the `*** Tasks ***` cell.
 
 *** Tasks ***
 Find an Image from Google Images
