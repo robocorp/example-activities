@@ -18,8 +18,8 @@ Find an Image from Google Images
 #
 # So, now we've seen _two_ of the _four_ available cell types, `*** Settings ***` and `*** Tasks ***`.
 # 
-# - In the `*** Settings ***` we gave our robot access to powerful web browser-related keywords by importing the `RPA.Browser` library
-# - In the `*** Tasks ***` cell we gave our robot a named task with the 'Find Image' keyword that will be activated when that task is run
+# - In the `*** Settings ***` cell we gave our robot access to powerful web browser-related keywords by importing the `RPA.Browser` library
+# - In the `*** Tasks ***` cell we gave our robot a *task* called 'Find an Image from Google Images', with a 'Find Image' keyword that will be activated when the task is run
 #
 # Now we need to describe what work is represented by the 'Find Image' keyword.
 #
