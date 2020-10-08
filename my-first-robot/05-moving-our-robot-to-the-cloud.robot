@@ -44,7 +44,7 @@ Visit Robocorp Cloud
 #
 # Now, select 'Example workspace', then select the 'Google Image Search' robot inside it and click `Publish`! It will ask if you want to overwrite the example robot in the Cloud with our new Lab's robot: we do, so select `Confirm`
 #
-# Our robot from this file is now available in the Robocorp Cloud! Please note that any changes that we make to our robot will have to be republished.
+# Our robot from this file is now available in the Robocorp Cloud! Please note that any changes that we make to our robot in Robocorp Lab will have to be republished so the robot in the Cloud is updated as well.
 #
 # Now go back to the Robocorp Cloud in your web browser and try to run our robot from there.
 #
