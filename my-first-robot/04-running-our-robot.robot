@@ -30,11 +30,14 @@ Find an Image from Google Images
 #
 # 1. **Click on each cell, and then the `▸`, one after the other:**  
 #     - The `▸` button is found in the icon toolbar
+#     - Clicking the cell and then the `▸` button readies the cell for process execution by *compiling* the cell
+#     - When the `*** Settings ***`, `*** Keyword ***`, `*** Tasks ***` cells have been compiled we can run them by clicking the `Find Image` button that appears
 #
 #
 # 2. **Running all the cells in an open `.robot` file in one go by clicking `▸▸`:**
 #     - The `▸▸` button is found in the icon toolbar
-#     - This is known as '*running the notebook*' and will ask whether you want to '*Restart Kernel?*' That's okay! You can click `Restart`
+#     - This is known as '*running the notebook*' and will compile and execution all the cells in one go (without needing to click the `Find Image` button that appears) 
+#     - This run method will ask whether you want to '*Restart Kernel?*'... That's okay! You can click `Restart`
 #
 #
 # 3. **Running the main robot configured for a project by clicking `▸ Run Robot`:**
