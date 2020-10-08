@@ -42,7 +42,8 @@ Find an Image from Google Images
 #
 # 3. **Running the main robot configured for a project by clicking `▸ Run Robot`:**
 #      - The `▸ Run Robot` button is found at the top-right of the Lab
-#      - The main robot for a project is configured in the `robot.yaml` file (We'll discuss this file in depth in a more advanced tutorial)
+#      - The default *Task* for a project is configured in the `robot.yaml` file (We'll discuss this file in depth in a more advanced tutorial)
+#      - In the `robot.yaml` file you have more control over your robot and can define multiple tasks
 #
 # Try any one of these methods now...
 #
