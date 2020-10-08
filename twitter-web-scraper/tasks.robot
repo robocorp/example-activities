@@ -27,7 +27,9 @@ Accept the cookie notice
 *** Keywords ***
 Hide element
     [Arguments]    ${locator}
-    Execute Javascript
+    Mute Run On Failure    Execute Javascript
+    Run Keyword And Ignore Error
+    ...    Execute Javascript
     ...    document.querySelector('${locator}').style.display = 'none'
 
 *** Keywords ***
@@ -38,9 +40,8 @@ Hide distracting UI elements
     ...    nav
     ...    div[data-testid="primaryColumn"] > div > div
     ...    div[data-testid="sidebarColumn"]
-    Mute Run On Failure    Hide element
     FOR    ${locator}    IN    @{locators}
-        Run Keyword And Ignore Error    Hide element    ${locator}
+        Hide element    ${locator}
     END
 
 *** Keywords ***
@@ -50,7 +51,7 @@ Scroll down to load dynamic content
         Sleep    500ms
     END
     Execute Javascript    window.scrollTo(0, 0)
-    Sleep    1s
+    Sleep    500ms
 
 *** Keywords ***
 Get tweets

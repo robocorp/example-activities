@@ -12,3 +12,6 @@ temp/
 .virtual_documents/
 */.virtual_documents/*
 testrun/*
+log.html
+output.xml
+report.html
