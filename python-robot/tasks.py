@@ -11,9 +11,9 @@ def open_the_website(url: str):
 
 
 def search_for(term: str):
-    input = "css:input"
-    browser.input_text(input, term)
-    browser.press_keys(input, "ENTER")
+    input_field = "css:input"
+    browser.input_text(input_field, term)
+    browser.press_keys(input_field, "ENTER")
 
 
 def store_screenshot(filename: str):
