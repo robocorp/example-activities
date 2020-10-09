@@ -30,21 +30,21 @@ Download The Excel file
 
 *** Keywords ***
 Fill And Submit The Form For One Person
-    [Arguments]    ${salesRep}
-    Input Text    firstname    ${salesRep}[First Name]
-    Input Text    lastname    ${salesRep}[Last Name]
-    Input Text    salesresult    ${salesRep}[Sales]
-    ${target_as_string}=    Convert To String    ${salesRep}[Sales Target]
+    [Arguments]    ${sales_rep}
+    Input Text    firstname    ${sales_rep}[First Name]
+    Input Text    lastname    ${sales_rep}[Last Name]
+    Input Text    salesresult    ${sales_rep}[Sales]
+    ${target_as_string}=    Convert To String    ${sales_rep}[Sales Target]
     Select From List By Value    salestarget    ${target_as_string}
     Click Button    Submit
 
 *** Keywords ***
 Fill The Form Using The Data From The Excel File
     Open Workbook    SalesData.xlsx
-    ${salesReps}=    Read Worksheet As Table    header=True
+    ${sales_reps}=    Read Worksheet As Table    header=True
     Close Workbook
-    FOR    ${salesRep}    IN    @{salesReps}
-        Fill And Submit The Form For One Person    ${salesRep}
+    FOR    ${sales_rep}    IN    @{sales_reps}
+        Fill And Submit The Form For One Person    ${sales_rep}
     END
 
 *** Keywords ***
