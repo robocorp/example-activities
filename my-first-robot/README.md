@@ -2,14 +2,14 @@
 
 # Welcome to Robocorp Lab's Interactive Tutorial!
 
-Over the course of this simple 6-part tutorial using the power of Robot Framework you'll create a working software robot that:
+Over the course of this simple 6-part tutorial, using the power of Robot Framework, you'll create a working software robot that:
 * opens a web browser
 * searches for an image of our choosing
 * display the image to you
 
 You'll then move your new software robot to live in the Robocorp Cloud, where the image will be saved as a new file for later use.
 
-### This Tutorial Consists Of:
+### This tutorial will take `~25 minutes` and consists of:
 1. [Understanding Cells](./01-cells.robot)
 2. [Tasks](./02.tasks.robot)
 3. [Keywords](./03-keywords.robot)
@@ -21,7 +21,7 @@ As you proceed through each part you'll be introduced to the basic ideas and fea
 
 If you want to learn the essential concepts, click the link below to start from the beginning:
 
-<img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [01: Understanding cells](./01-cells.robot)
+<img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [01: Understanding Cells](./01-cells.robot)
 
 Experienced developer in a hurry? Want to see what a completed Robocorp robot definition looks like? Skip to part 04:
 

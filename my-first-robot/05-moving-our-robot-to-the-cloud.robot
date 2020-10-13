@@ -24,23 +24,30 @@ Find an Image from Google Images
 # ****
 #
 # ## Part 5. Moving Our Robot to the Cloud
-# 
-# > Note: *Make sure you have first [linked your Robocorp Lab installation to Robocorp Cloud](https://robocorp.com/docs/product-manuals/robocorp-lab/linking-robocorp-lab-to-robocorp-cloud). If not, you can do so from the Robocorp Lab's Welcome screen and then reopen this tutorial.*
-# 
-# Before uploading our robot, we have to make sure everything is set-up in the Cloud for it to be welcomed into its new home. Robocorp has written its own robot to make this as easy as clicking a button, such is the power of software robots!
 #
-# Click the cell below, click `▸`, and then click the 'Visit Robocorp Cloud' button that appears below it.
+# > **NOTE**: *Make sure you have first [linked your Robocorp Lab installation to Robocorp Cloud](https://robocorp.com/docs/product-manuals/robocorp-lab/linking-robocorp-lab-to-robocorp-cloud).
+# >
+# > To check, please close the tutorial, navigate to Robocorp Lab's 'Welcome' screen, and look for the `Link to Cloud` button; if it exists, then click it, link to the Robocorp Cloud and then repon this tutorial.*
+#
+# So, you've linked your Robocorp Lab to Robocorp Cloud but before uploading our robot, we have to make sure everything is set-up in the Cloud for it to be welcomed into its new home.
+# Robocorp has provided a cell for you to make this as easy as clicking a button, such is the power of software robots!
+#
+# Let's setup Robocorp's cell with our `*** Settings ***` cell. Run our robot's `*** Settings ***` cell above first with the 'click-then-`▸`' process we've learned, then run the `*** Keyword ***` cell below in the same way.
 
 *** Keyword ***
 Visit Robocorp Cloud
     Open User Browser    https://cloud.robocorp.com
 
-# All seems ready, let's publish our robot! Look to the top right of the Lab window, in the tool bar, and click the `Publish to Robocorp Cloud` button. Select the example workspace, the Google Image Search robot inside it and hit Publish! 
-# 
-# The robot from this file is available in the Robocorp Cloud! Please note that any changes that we make to our robot will have to be republished.
-# 
+# A `Visit Robocorp Cloud` button should have appeared. Click it!
+#
+# All seems ready, let's publish our robot from here in Robocorp Lab! Look to the top right of the Lab window, in the tool bar, and click the `Publish to Robocorp Cloud` button.
+#
+# Now, select 'Example workspace', then select the 'Google Image Search' robot inside it and click `Publish`! It will ask if you want to overwrite the example robot in the Cloud with our new Lab's robot: we do, so select `Confirm`
+#
+# Our robot from this file is now available in the Robocorp Cloud! Please note that any changes that we make to our robot in Robocorp Lab will have to be republished so the robot in the Cloud is updated as well.
+#
 # Now go back to the Robocorp Cloud in your web browser and try to run our robot from there.
 #
 # When you've done that, let's finish by looking at what we've learned and some ideas for further development.
-# 
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 6: Finishing Thoughts](./06-finishing-thoughts.md).
+#
+# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 6: Finishing Thoughts](./06-finishing-thoughts.md)
