@@ -14,4 +14,4 @@ Click the link below to get to the code:
 
 [tasks.robot](./tasks.robot)
 
-> You can find more information on this example robot on our [documentation site](https://robocorp.com/docs/development-howtos/dialogs-assistant/uploading-files).
+> You can find more information on this example robot on [Robocorp's documentation site](https://robocorp.com/docs/development-howtos/dialogs-assistant/uploading-files).
