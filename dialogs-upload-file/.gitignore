@@ -1,0 +1,17 @@
+output/
+venv/
+temp/
+.rpa/
+.idea/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.vscode
+.DS_Store
+*.pyc
+*.zip
+.virtual_documents/
+*/.virtual_documents/*
+testrun/*
+form.html
+# We want to commit the example file for users to test this out.
+!ExampleExcelFile.xlsx
