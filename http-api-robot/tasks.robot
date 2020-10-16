@@ -1,7 +1,7 @@
 # ## Http API robot
 #
 # This simple robot fetches and logs the latest launch data from SpaceX API using RPA Framework.
-# > You can find the full tutorial and instructions on our [documentation site](https://robocorp.com/docs/development-howtos/http/http-api-robot-tutorial).
+# > You can find the full tutorial and instructions on [Robocorp's documentation site](https://robocorp.com/docs/development-howtos/http/http-api-robot-tutorial).
 
 *** Settings ***
 Documentation     HTTP API robot. Retrieves data from SpaceX API. Demonstrates
