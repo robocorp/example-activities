@@ -8,4 +8,4 @@ Click the link below to get to the code:
 
 [tasks.robot](./tasks.robot)
 
-> You can find more information on this example robot on [Robococorp's documentation site](https://robocorp.com/docs/development-howtos/dialogs-assistant/how-to-collect-input-from-users).
+> You can find more information on this example robot on [Robocorp's documentation site](https://robocorp.com/docs/development-howtos/dialogs-assistant/how-to-collect-input-from-users).
