@@ -8,7 +8,7 @@ This example builds on top of the `robotsparebin-complete` example, which is exp
 
 This example is very suited to be used with the [Robot Assistants feature of Robocorp Cloud](https://robocorp.com/docs/product-manuals/robocorp-cloud/using-assistant-robots).
 
-<img src="images/robot-running-in-assistant.gif" width="700px" style="margin: 20px auto">
+<img src="images/form-ui.png" style="margin-bottom:20px">
 
 Click the link below to get to the code:
 
