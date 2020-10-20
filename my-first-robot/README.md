@@ -21,8 +21,8 @@ As you proceed through each part you'll be introduced to the basic ideas and fea
 
 If you want to learn the essential concepts, click the link below to start from the beginning:
 
-<img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [01: Understanding Cells](./01-cells.robot)
+<img src="images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [01: Understanding Cells](./01-cells.robot)
 
 Experienced developer in a hurry? Want to see what a completed Robocorp robot definition looks like? Skip to part 04:
 
-<img src="../images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [04: Running our Robot](./04-running-our-robot.robot)
+<img src="images/robot.svg" width="16"  style="vertical-align:text-top">&nbsp; [04: Running our Robot](./04-running-our-robot.robot)
