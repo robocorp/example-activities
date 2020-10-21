@@ -41,7 +41,7 @@ Find Image
 # 4. Wait for Google to find the images
 # 5. Choose an image they like
 #
-# We can describe this step-by-step process a human would take to our robot using special keywords provided when we imported the `RPA.Browser` library. Here's how it looks...
+# We can describe this step-by-step process a human would take to our robot using special keywords provided when we imported the `RPA.Browser` library (like `Open Available Browser` and `Submit Form`). Here's how it looks...
 
 *** Keyword ***
 Find Image
