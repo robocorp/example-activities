@@ -58,4 +58,4 @@ Find an Image from Google Images
 #
 # The last part of the tutorial will show you how to achieve this.
 #
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 5: Moving Our Robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot)
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 5: Moving Our Robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot)

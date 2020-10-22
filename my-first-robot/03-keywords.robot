@@ -53,4 +53,4 @@ Find Image
 
 # Our robot is now almost ready. In the next step we will put all of our robot's cells together and actually run it!
 # 
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)

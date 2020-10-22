@@ -43,4 +43,4 @@ Find an Image from Google Images
 #
 # When you've done that, let's finish by looking at what we've learned and some ideas for further development.
 #
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 6: Finishing Thoughts](./06-finishing-thoughts.md)
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 6: Finishing Thoughts](./06-finishing-thoughts.md)
