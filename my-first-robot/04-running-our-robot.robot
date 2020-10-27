@@ -13,8 +13,9 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
-    Wait Until Element Is Visible  alias:Google.FirstImage
-    Screenshot    alias:Google.FirstImage
+    ${FIRST_IMAGE}=  Set Variable    css:div[data-ri=\"0\"]
+    Wait Until Element Is Visible    ${FIRST_IMAGE}
+    Screenshot    ${FIRST_IMAGE}
 
 *** Tasks ***
 Find an Image from Google Images
