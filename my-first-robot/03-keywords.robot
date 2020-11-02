@@ -17,7 +17,7 @@ Find an Image from Google Images
 # ## Part 3. Keywords
 #
 # So, now we've seen _two_ of the _four_ available cell types, `*** Settings ***` and `*** Tasks ***`.
-# 
+#
 # - In the `*** Settings ***` cell we gave our robot access to powerful web browser-related keywords by importing the `RPA.Browser` library
 # - In the `*** Tasks ***` cell we gave our robot a *task* called 'Find an Image from Google Images', with a 'Find Image' keyword that will be activated when the task is run
 #
@@ -48,8 +48,9 @@ Find Image
     Open Available Browser    https://images.google.com
     Input Text    name:q    cute puppy
     Submit Form
-    Wait Until Element Is Visible  alias:Google.FirstImage
-    Screenshot    alias:Google.FirstImage
+    ${FIRST_IMAGE}=  Set Variable    css:div[data-ri=\"0\"]
+    Wait Until Element Is Visible    ${FIRST_IMAGE}
+    Screenshot    ${FIRST_IMAGE}
 
 # Our robot is now almost ready. In the next step we will put all of our robot's cells together and actually run it!
 # 
