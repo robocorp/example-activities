@@ -2,7 +2,7 @@
 #
 # Run this example to solve the form challenge at http://rpachallenge.com/.
 #
-# Get the full tutorial and explanation <a href="https://robocorp.com/docs/examples/rpa-form-challenge">on our site</a>.
+# Get the full tutorial and explanation <a href="https://robocorp.com/docs/development-howtos/browser/rpa-form-challenge">on our site</a>.
 #
 # In Robocorp Lab, click on the `>>` button above to run the whole example, or you can execute each cell by using the `>` button.
 #

@@ -1,7 +1,7 @@
 # ## Web store order robot example
-# This example is explained in detail <a href="https://robocorp.com/docs/examples/web-store-order-robot">here</a>.
+# This example is explained in detail <a href="https://robocorp.com/docs/development-howtos/browser/web-store-order-robot">here</a>.
 #
-# > !! **To run this code locally, you need to complete additional setup steps. Check the README.md file or the <a href="https://robocorp.com/docs/examples/web-store-order-robot">example page</a> for details!**
+# > !! **To run this code locally, you need to complete additional setup steps. Check the README.md file or the <a href="https://robocorp.com/docs/development-howtos/browser/web-store-order-robot">example page</a> for details!**
 #
 
 *** Settings ***

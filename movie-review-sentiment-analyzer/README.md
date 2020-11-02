@@ -9,7 +9,7 @@ The robot:
 - Starts and completes the review classification (positive vs. negative)
 - Submits the classification and captures the final results
 
-> NOTE: This example needs some manual configuration steps. You can find the full tutorial and instructions on [Robocorp's documentation site](https://www.robocorp.com/docs/examples/movie-review-sentiment-analyzer-robot).
+> NOTE: This example needs some manual configuration steps. You can find the full tutorial and instructions on [Robocorp's documentation site](https://www.robocorp.com/docs/development-howtos/ai-machine-learning/movie-review-sentiment-analyzer-robot).
 
 Click the link below to get to the code:
 
