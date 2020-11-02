@@ -38,4 +38,4 @@ Task Teardown     Close All Browsers
 #
 # In the next part we'll define the tasks that we want our robot to perform using the `*** Tasks ***` cell type!
 #
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 2: Tasks](./02-tasks.robot).
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 2: Tasks](./02-tasks.robot)

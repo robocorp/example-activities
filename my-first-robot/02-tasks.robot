@@ -12,6 +12,9 @@ Task Teardown     Close All Browsers
 #
 # ## Part 2. Tasks
 #
+# > **NOTE:** We're now in a new *.robot* file and you may have noticed that `*** Settings ***` no longer has a `[number]:` at the top-left of the cell.
+# > This is because the state of a cell, whether it is 'alive' (technically, whether it has been compiled before), is **not** shared between different *.robot* files.
+#
 # After assigning our robot `*** Settings ***` we can add a `*** Tasks ***` cell that defines what we want our robot to do.
 #
 # Let's give our robot a short descriptive *Task* name. We wanted our robot to open the browser and find an image, so let's go with that. Here's our task cell, with its *Task* name.
@@ -33,4 +36,4 @@ Find an Image from Google Images
 #
 # We'll have to define what exactly we want 'Find Image' to mean using our next cell type: `*** Keyword ***`
 #
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 3: Keywords](./03-keywords.robot)
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 3: Keywords](./03-keywords.robot)

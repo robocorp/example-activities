@@ -41,7 +41,7 @@ Find Image
 # 4. Wait for Google to find the images
 # 5. Choose an image they like
 #
-# We can describe this step-by-step process a human would take to our robot using special keywords provided when we imported the `RPA.Browser` library. Here's how it looks...
+# We can describe this step-by-step process a human would take to our robot using special keywords provided when we imported the `RPA.Browser` library (like `Open Available Browser` and `Submit Form`). Here's how it looks...
 
 *** Keyword ***
 Find Image
@@ -53,5 +53,5 @@ Find Image
     Screenshot    ${FIRST_IMAGE}
 
 # Our robot is now almost ready. In the next step we will put all of our robot's cells together and actually run it!
-#
-# <img src="../images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)
+# 
+# <img src="images/robot.svg" width="16" style="vertical-align:text-top">&nbsp; [Part 4: Running Our Robot](./04-running-our-robot.robot)

@@ -11,7 +11,7 @@ You'll then move your new software robot to live in the Robocorp Cloud, where th
 
 ### This tutorial will take `~25 minutes` and consists of:
 1. [Understanding Cells](./01-cells.robot)
-2. [Tasks](./02.tasks.robot)
+2. [Tasks](./02-tasks.robot)
 3. [Keywords](./03-keywords.robot)
 4. [Running Our Robot](./04-running-our-robot.robot)
 5. [Moving Our Robot to the Cloud](./05-moving-our-robot-to-the-cloud.robot)
