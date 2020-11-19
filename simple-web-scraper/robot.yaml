@@ -1,5 +1,5 @@
 tasks:
-  Web scraper:
+  Web scraper Robot Framework:
     command:
       - python
       - -m
@@ -11,6 +11,10 @@ tasks:
       - --logtitle
       - Task log
       - tasks.robot
+  Web scraper Python:
+    command:
+      - python
+      - tasks.py
 
 condaConfigFile: conda.yaml
 artifactsDir: output
