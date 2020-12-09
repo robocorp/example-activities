@@ -1,3 +1,5 @@
+DEPRECATED: Please find the robots at [Robocorp Portal](https://robocorp.com/portal/) instead.
+
 # Robocorp example robots
 
 Each example robot directory contains a `README.md` that provides information regarding the robot.
